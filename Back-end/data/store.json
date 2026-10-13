@@ -1,0 +1,13 @@
+{
+  "users": [
+    {
+      "id": "b1b0515a-8351-4fbd-8f18-daa977cc4e95",
+      "name": "Alex Doe",
+      "email": "alex@example.com",
+      "salt": "ea568722f85d2a71c2249735dcee577c",
+      "hash": "b463025c9d2e17e311655b9f54e31c6a7e435a56a75500e2704655e4ab910de6801d01e7542968a9bb7fa39d47a238c7c43bd566185a82d8cbfc6ff0506b88bf",
+      "createdAt": "2026-09-01T07:26:23.058Z"
+    }
+  ],
+  "orders": []
+}

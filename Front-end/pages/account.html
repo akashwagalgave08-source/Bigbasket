@@ -1,0 +1,1696 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>My Account - FreshCart</title>
+
+    <style>
+
+        /* =========================================================
+           RESET
+        ========================================================= */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f6f6f6;
+            color: #222;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+
+        /* =========================================================
+           HEADER
+        ========================================================= */
+
+        .main-header {
+
+            background: white;
+
+            border-bottom: 1px solid #e3e3e3;
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 100;
+
+        }
+
+        .header-container {
+
+            width: 94%;
+
+            max-width: 1300px;
+
+            margin: auto;
+
+            min-height: 78px;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 20px;
+
+        }
+
+
+        /* LOGO */
+
+        .logo a {
+
+            display: flex;
+
+            align-items: center;
+
+            font-size: 26px;
+
+            font-weight: 700;
+
+            white-space: nowrap;
+
+        }
+
+        .logo span {
+
+            color: #222;
+
+        }
+
+        .logo strong {
+
+            color: #84c225;
+
+        }
+
+
+        /* LOCATION */
+
+        .location-btn {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            border: none;
+
+            background: transparent;
+
+            cursor: pointer;
+
+            font-family: inherit;
+
+            text-align: left;
+
+        }
+
+        .location-icon {
+
+            width: 34px;
+
+            height: 34px;
+
+            border-radius: 50%;
+
+            background: #fdecea;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-size: 16px;
+
+        }
+
+        .location-btn small {
+
+            display: block;
+
+            color: #777;
+
+            font-size: 11px;
+
+        }
+
+        .location-btn strong {
+
+            display: block;
+
+            font-size: 13px;
+
+        }
+
+
+        /* SEARCH */
+
+        .search-box {
+
+            flex: 1;
+
+            display: flex;
+
+            height: 44px;
+
+            max-width: 600px;
+
+        }
+
+        .search-box input {
+
+            flex: 1;
+
+            border: 1px solid #ddd;
+
+            border-right: none;
+
+            border-radius: 6px 0 0 6px;
+
+            padding: 0 15px;
+
+            font-size: 14px;
+
+            outline: none;
+
+        }
+
+        .search-box input:focus {
+
+            border-color: #84c225;
+
+        }
+
+        .search-box button {
+
+            width: 55px;
+
+            border: none;
+
+            background: #84c225;
+
+            color: white;
+
+            border-radius: 0 6px 6px 0;
+
+            cursor: pointer;
+
+            font-size: 18px;
+
+        }
+
+
+        /* HEADER ACTIONS */
+
+        .header-actions {
+
+            display: flex;
+
+            gap: 22px;
+
+        }
+
+        .header-action {
+
+            border: none;
+
+            background: transparent;
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+
+            gap: 3px;
+
+            cursor: pointer;
+
+            font-family: inherit;
+
+            color: #222;
+
+            font-size: 11px;
+
+            position: relative;
+
+            text-decoration: none;
+
+        }
+
+        .header-action span {
+
+            font-size: 20px;
+
+        }
+
+        .header-action b {
+
+            position: absolute;
+
+            top: -6px;
+
+            right: -10px;
+
+            background: #ff6d00;
+
+            color: white;
+
+            width: 17px;
+
+            height: 17px;
+
+            border-radius: 50%;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-size: 10px;
+
+            font-weight: bold;
+
+        }
+
+        .header-action.active {
+
+            color: #579d20;
+
+        }
+
+
+        /* LOGOUT / SIGN IN */
+
+        .header-auth-btn {
+
+            background: #84c225;
+
+            color: white;
+
+            padding: 10px 20px;
+
+            border-radius: 6px;
+
+            font-weight: bold;
+
+            font-size: 14px;
+
+            white-space: nowrap;
+
+            border: none;
+
+            cursor: pointer;
+
+        }
+
+        .header-auth-btn:hover {
+
+            background: #6da91c;
+
+        }
+
+
+        /* MOBILE MENU */
+
+        .mobile-menu-btn {
+
+            display: none;
+
+            border: none;
+
+            background: transparent;
+
+            font-size: 22px;
+
+            cursor: pointer;
+
+        }
+
+
+        /* =========================================================
+           PAGE
+        ========================================================= */
+
+        .account-page {
+
+            width: 92%;
+
+            max-width: 1300px;
+
+            margin: auto;
+
+            padding: 25px 0 60px;
+
+        }
+
+        .account-breadcrumb {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+            font-size: 13px;
+
+            margin-bottom: 25px;
+
+        }
+
+        .account-breadcrumb a {
+
+            color: #579d20;
+
+        }
+
+
+        /* =========================================================
+           LAYOUT
+        ========================================================= */
+
+        .account-layout {
+
+            display: grid;
+
+            grid-template-columns: 280px 1fr;
+
+            gap: 25px;
+
+            align-items: start;
+
+        }
+
+
+        /* =========================================================
+           SIDEBAR
+        ========================================================= */
+
+        .account-sidebar {
+
+            background: white;
+
+            border: 1px solid #e3e3e3;
+
+            border-radius: 12px;
+
+            overflow: hidden;
+
+            position: sticky;
+
+            top: 100px;
+
+        }
+
+        .sidebar-profile {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+            padding: 20px;
+
+            background: #f1f8e9;
+
+            border-bottom: 1px solid #e3e3e3;
+
+        }
+
+        .sidebar-avatar {
+
+            width: 50px;
+
+            height: 50px;
+
+            flex-shrink: 0;
+
+            border-radius: 50%;
+
+            background: #84c225;
+
+            color: white;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-size: 21px;
+
+        }
+
+        .sidebar-profile h3 {
+
+            margin: 0 0 4px;
+
+            font-size: 15px;
+
+        }
+
+        .sidebar-profile p {
+
+            margin: 0;
+
+            color: #777;
+
+            font-size: 11px;
+
+        }
+
+
+        /* NAVIGATION */
+
+        .account-navigation {
+
+            padding: 10px;
+
+        }
+
+        .account-nav-item {
+
+            width: 100%;
+
+            border: none;
+
+            background: transparent;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+            padding: 14px 12px;
+
+            border-radius: 7px;
+
+            cursor: pointer;
+
+            color: #333;
+
+            text-align: left;
+
+            font-size: 14px;
+
+            font-family: inherit;
+
+        }
+
+        .account-nav-item span {
+
+            flex: 1;
+
+        }
+
+        .account-nav-item:hover {
+
+            background: #f5f9f1;
+
+            color: #579d20;
+
+        }
+
+        .account-nav-item.active {
+
+            background: #edf7df;
+
+            color: #579d20;
+
+            font-weight: 600;
+
+        }
+
+
+        /* LOGOUT */
+
+        .sidebar-logout {
+
+            width: calc(100% - 20px);
+
+            margin: 5px 10px 15px;
+
+            height: 42px;
+
+            border: 1px solid #e53935;
+
+            background: white;
+
+            color: #e53935;
+
+            border-radius: 7px;
+
+            cursor: pointer;
+
+            font-weight: 600;
+
+            font-family: inherit;
+
+        }
+
+        .sidebar-logout:hover {
+
+            background: #fff3f3;
+
+        }
+
+
+        /* =========================================================
+           CONTENT
+        ========================================================= */
+
+        .account-content {
+
+            min-width: 0;
+
+        }
+
+        .account-card {
+
+            background: white;
+
+            border: 1px solid #e3e3e3;
+
+            border-radius: 12px;
+
+            padding: 35px;
+
+        }
+
+        .content-heading {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            margin-bottom: 20px;
+
+        }
+
+        .content-heading h1 {
+
+            margin: 0 0 5px;
+
+            font-size: 26px;
+
+        }
+
+        .content-heading p {
+
+            margin: 0;
+
+            color: #777;
+
+            font-size: 13px;
+
+        }
+
+
+        /* =========================================================
+           PROFILE
+        ========================================================= */
+
+        .profile-card {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 20px;
+
+            background: white;
+
+            border: 1px solid #ddd;
+
+            border-radius: 12px;
+
+            padding: 25px;
+
+        }
+
+        .large-profile-avatar {
+
+            width: 85px;
+
+            height: 85px;
+
+            border-radius: 50%;
+
+            background: #84c225;
+
+            color: white;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-size: 32px;
+
+            flex-shrink: 0;
+
+        }
+
+        .profile-information {
+
+            flex: 1;
+
+        }
+
+        .profile-information h2 {
+
+            margin: 0 0 7px;
+
+            font-size: 20px;
+
+        }
+
+        .profile-information p {
+
+            margin: 4px 0;
+
+            color: #777;
+
+            font-size: 13px;
+
+        }
+
+        .edit-profile-button {
+
+            border: 1px solid #84c225;
+
+            color: #579d20;
+
+            background: white;
+
+            border-radius: 6px;
+
+            padding: 10px 15px;
+
+            cursor: pointer;
+
+            font-weight: 600;
+
+            font-family: inherit;
+
+            white-space: nowrap;
+
+        }
+
+        .edit-profile-button:hover {
+
+            background: #f5faef;
+
+        }
+
+
+        /* STATS */
+
+        .profile-stats {
+
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 15px;
+
+            margin-top: 20px;
+
+        }
+
+        .profile-stats > div {
+
+            padding: 22px;
+
+            background: white;
+
+            border: 1px solid #ddd;
+
+            border-radius: 10px;
+
+            text-align: center;
+
+        }
+
+        .profile-stats strong {
+
+            display: block;
+
+            color: #579d20;
+
+            font-size: 23px;
+
+        }
+
+        .profile-stats span {
+
+            color: #777;
+
+            font-size: 12px;
+
+        }
+
+
+        /* =========================================================
+           EMPTY STATES
+        ========================================================= */
+
+        .empty-account-state {
+
+            padding: 70px 20px;
+
+            background: white;
+
+            border: 1px solid #ddd;
+
+            border-radius: 12px;
+
+            text-align: center;
+
+        }
+
+        .empty-account-state > div {
+
+            font-size: 55px;
+
+            margin-bottom: 15px;
+
+        }
+
+        .empty-account-state h2 {
+
+            margin: 0 0 8px;
+
+        }
+
+        .empty-account-state p {
+
+            color: #777;
+
+            font-size: 13px;
+
+            margin-bottom: 22px;
+
+        }
+
+        .empty-account-state .green-btn {
+
+            display: inline-flex;
+
+            width: auto;
+
+            padding: 0 25px;
+
+        }
+
+
+        /* =========================================================
+           OFFERS
+        ========================================================= */
+
+        .offers-grid {
+
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 18px;
+
+        }
+
+        .reward-card {
+
+            padding: 25px;
+
+            border-radius: 12px;
+
+            border: 1px solid #ddd;
+
+            background: linear-gradient(135deg, #f5fbef, white);
+
+        }
+
+        .reward-card > div {
+
+            font-size: 35px;
+
+        }
+
+        .reward-card h3 {
+
+            margin: 15px 0 8px;
+
+        }
+
+        .reward-card p {
+
+            color: #777;
+
+            font-size: 13px;
+
+            line-height: 1.5;
+
+        }
+
+        .reward-card strong {
+
+            display: inline-block;
+
+            margin-top: 10px;
+
+            padding: 7px 10px;
+
+            border-radius: 5px;
+
+            background: #edf7df;
+
+            color: #579d20;
+
+            font-size: 11px;
+
+        }
+
+
+        /* =========================================================
+           SETTINGS
+        ========================================================= */
+
+        .settings-card {
+
+            background: white;
+
+            border: 1px solid #ddd;
+
+            border-radius: 12px;
+
+        }
+
+        .setting-row {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 20px;
+
+            padding: 20px;
+
+            border-bottom: 1px solid #eee;
+
+        }
+
+        .setting-row:last-child {
+
+            border-bottom: none;
+
+        }
+
+        .setting-row strong {
+
+            display: block;
+
+            margin-bottom: 5px;
+
+        }
+
+        .setting-row p {
+
+            margin: 0;
+
+            color: #777;
+
+            font-size: 12px;
+
+        }
+
+
+        /* SWITCH */
+
+        .switch {
+
+            position: relative;
+
+            width: 45px;
+
+            height: 24px;
+
+            flex-shrink: 0;
+
+        }
+
+        .switch input {
+
+            opacity: 0;
+
+            width: 0;
+
+            height: 0;
+
+        }
+
+        .switch span {
+
+            position: absolute;
+
+            inset: 0;
+
+            background: #ccc;
+
+            border-radius: 20px;
+
+            cursor: pointer;
+
+        }
+
+        .switch span::before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 18px;
+
+            height: 18px;
+
+            left: 3px;
+
+            top: 3px;
+
+            background: white;
+
+            border-radius: 50%;
+
+            transition: 0.2s;
+
+        }
+
+        .switch input:checked + span {
+
+            background: #84c225;
+
+        }
+
+        .switch input:checked + span::before {
+
+            transform: translateX(21px);
+
+        }
+
+
+        /* =========================================================
+           BUTTONS
+        ========================================================= */
+
+        .green-btn {
+
+            min-height: 46px;
+
+            display: inline-flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            border: none;
+
+            border-radius: 7px;
+
+            background: #84c225;
+
+            color: white;
+
+            font-weight: 700;
+
+            cursor: pointer;
+
+            padding: 10px 20px;
+
+            font-size: 14px;
+
+            font-family: inherit;
+
+        }
+
+        .green-btn:hover {
+
+            background: #6da91c;
+
+        }
+
+
+        /* =========================================================
+           HIDDEN
+        ========================================================= */
+
+        .hidden {
+
+            display: none !important;
+
+        }
+
+
+        /* =========================================================
+           RESPONSIVE
+        ========================================================= */
+
+        @media (max-width: 1000px) {
+
+            .account-layout {
+
+                grid-template-columns: 230px 1fr;
+
+            }
+
+            .offers-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+        }
+
+        @media (max-width: 900px) {
+
+            .header-container {
+
+                flex-wrap: wrap;
+
+                padding: 12px 0;
+
+            }
+
+            .search-box {
+
+                order: 3;
+
+                width: 100%;
+
+                max-width: none;
+
+            }
+
+            .mobile-menu-btn {
+
+                display: block;
+
+            }
+
+        }
+
+        @media (max-width: 768px) {
+
+            .account-layout {
+
+                grid-template-columns: 1fr;
+
+            }
+
+            .account-sidebar {
+
+                position: static;
+
+            }
+
+            .account-navigation {
+
+                display: grid;
+
+                grid-template-columns: 1fr 1fr;
+
+                gap: 5px;
+
+            }
+
+            .account-nav-item {
+
+                font-size: 12px;
+
+            }
+
+            .profile-card {
+
+                flex-wrap: wrap;
+
+                text-align: center;
+
+                justify-content: center;
+
+            }
+
+            .profile-information {
+
+                min-width: 150px;
+
+            }
+
+        }
+
+        @media (max-width: 500px) {
+
+            .account-page {
+
+                width: 94%;
+
+                padding-top: 15px;
+
+            }
+
+            .account-card {
+
+                padding: 22px 16px;
+
+            }
+
+            .account-navigation {
+
+                grid-template-columns: 1fr;
+
+            }
+
+            .profile-stats {
+
+                grid-template-columns: 1fr;
+
+            }
+
+            .content-heading {
+
+                align-items: flex-start;
+
+                gap: 15px;
+
+                flex-direction: column;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body data-page="account">
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="main-header">
+
+    <div class="header-container">
+
+
+        <!-- LOGO -->
+
+        <div class="logo">
+            <a href="../index.html">
+                <span>fresh</span><strong>cart</strong>
+            </a>
+        </div>
+
+
+        <!-- LOCATION -->
+
+        <button
+            class="location-btn"
+            id="locationBtn"
+        >
+
+            <span class="location-icon">📍</span>
+
+            <span>
+                <small>Deliver to</small>
+                <strong id="locationText">Select Location</strong>
+            </span>
+
+        </button>
+
+
+        <!-- SEARCH -->
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search for fruits, vegetables, groceries..."
+                autocomplete="off"
+            >
+
+            <button id="searchButton" aria-label="Search">🔍</button>
+
+        </div>
+
+
+        <!-- HEADER ACTIONS -->
+
+        <div class="header-actions">
+
+            <a href="wishlist.html" class="header-action">
+                <span>♡</span>
+                <small>Wishlist</small>
+                <b id="wishlistCount">0</b>
+            </a>
+
+            <a href="account.html" class="header-action active">
+                <span>👤</span>
+                <small>Account</small>
+            </a>
+
+            <a href="cart.html" class="header-action">
+                <span>🛒</span>
+                <small>Cart</small>
+                <b id="cartCount">0</b>
+            </a>
+
+        </div>
+
+
+        <!-- MOBILE MENU -->
+
+        <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+
+    </div>
+
+</header>
+
+
+<!-- =====================================================
+     MAIN
+===================================================== -->
+
+<main class="account-page">
+
+
+    <!-- BREADCRUMB -->
+
+    <div class="account-breadcrumb">
+
+        <a href="../index.html">Home</a>
+        <span>/</span>
+        <strong>My Account</strong>
+
+    </div>
+
+
+    <!-- =================================================
+         ACCOUNT DASHBOARD
+    ================================================== -->
+
+    <div class="account-layout">
+
+
+        <!-- SIDEBAR -->
+
+        <aside class="account-sidebar">
+
+            <div class="sidebar-profile">
+
+                <div class="sidebar-avatar">👤</div>
+
+                <div>
+                    <h3 id="sidebarName"></h3>
+                    <p id="sidebarMobile"></p>
+                </div>
+
+            </div>
+
+
+            <div class="account-navigation">
+
+                <button class="account-nav-item active" data-section="profile">
+                    <span>👤 My Profile</span>
+                </button>
+
+                <button class="account-nav-item" data-section="orders">
+                    <span>📦 My Orders</span>
+                </button>
+
+                <button class="account-nav-item" data-section="wishlist">
+                    <span>♡ My Wishlist</span>
+                </button>
+
+                <button class="account-nav-item" data-section="addresses">
+                    <span>📍 Addresses</span>
+                </button>
+
+                <button class="account-nav-item" data-section="offers">
+                    <span>🎁 Offers & Rewards</span>
+                </button>
+
+                <button class="account-nav-item" data-section="settings">
+                    <span>⚙ Settings</span>
+                </button>
+
+            </div>
+
+            <button class="sidebar-logout" id="logoutButton">Logout</button>
+
+        </aside>
+
+
+        <!-- CONTENT -->
+
+        <div class="account-content">
+
+
+            <!-- PROFILE -->
+
+            <section id="profileSection" class="account-section">
+
+                <div class="content-heading">
+                    <div>
+                        <h1>My Profile</h1>
+                        <p>Manage your personal information.</p>
+                    </div>
+                    <button class="edit-profile-button">Edit Profile</button>
+                </div>
+
+                <div class="profile-card">
+
+                    <div class="large-profile-avatar">👤</div>
+
+                    <div class="profile-information">
+                        <h2 id="profileName"></h2>
+                        <p id="profileMobile"></p>
+                        <p id="profileEmail"></p>
+                    </div>
+
+                </div>
+
+                <div class="profile-stats">
+
+                    <div>
+                        <strong id="orderCount">0</strong>
+                        <span>Orders</span>
+                    </div>
+
+                    <div>
+                        <strong id="wishlistCountValue">0</strong>
+                        <span>Wishlist</span>
+                    </div>
+
+                    <div>
+                        <strong>₹250</strong>
+                        <span>Rewards</span>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ORDERS -->
+
+            <section id="ordersSection" class="account-section hidden">
+
+                <div class="content-heading">
+                    <div>
+                        <h1>My Orders</h1>
+                        <p>View and track your orders.</p>
+                    </div>
+                </div>
+
+                <div class="empty-account-state">
+                    <div>📦</div>
+                    <h2>No Orders Yet</h2>
+                    <p>You haven't placed any orders yet.</p>
+                    <a href="../index.html" class="green-btn">Start Shopping</a>
+                </div>
+
+            </section>
+
+
+            <!-- WISHLIST -->
+
+            <section id="wishlistSection" class="account-section hidden">
+
+                <div class="content-heading">
+                    <div>
+                        <h1>My Wishlist</h1>
+                        <p>Your saved products.</p>
+                    </div>
+                </div>
+
+                <div class="empty-account-state">
+                    <div>❤️</div>
+                    <h2>Wishlist is Empty</h2>
+                    <p>Add products to your wishlist.</p>
+                    <a href="../index.html" class="green-btn">Explore Products</a>
+                </div>
+
+            </section>
+
+
+            <!-- ADDRESSES -->
+
+            <section id="addressesSection" class="account-section hidden">
+
+                <div class="content-heading">
+                    <div>
+                        <h1>Saved Addresses</h1>
+                        <p>Manage your delivery addresses.</p>
+                    </div>
+                    <button class="green-btn" id="addAddressBtn">+ Add Address</button>
+                </div>
+
+                <div class="empty-account-state">
+                    <div>📍</div>
+                    <h2>No Address Added</h2>
+                    <p>Add your delivery address during checkout.</p>
+                </div>
+
+            </section>
+
+
+            <!-- OFFERS -->
+
+            <section id="offersSection" class="account-section hidden">
+
+                <div class="content-heading">
+                    <div>
+                        <h1>Offers & Rewards</h1>
+                        <p>Save more on your grocery shopping.</p>
+                    </div>
+                </div>
+
+                <div class="offers-grid">
+
+                    <div class="reward-card">
+                        <div>🎁</div>
+                        <h3>₹100 Welcome Offer</h3>
+                        <p>Use coupon WELCOME100 on your first order.</p>
+                        <strong>Valid till 30 Sep</strong>
+                    </div>
+
+                    <div class="reward-card">
+                        <div>🚚</div>
+                        <h3>Free Delivery</h3>
+                        <p>Free delivery on orders above ₹499.</p>
+                        <strong>Always Active</strong>
+                    </div>
+
+                    <div class="reward-card">
+                        <div>⭐</div>
+                        <h3>Reward Points</h3>
+                        <p>Earn 1 point for every ₹100 spent.</p>
+                        <strong>250 pts earned</strong>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- SETTINGS -->
+
+            <section id="settingsSection" class="account-section hidden">
+
+                <div class="content-heading">
+                    <div>
+                        <h1>Account Settings</h1>
+                        <p>Manage your account preferences.</p>
+                    </div>
+                </div>
+
+                <div class="settings-card">
+
+                    <div class="setting-row">
+                        <div>
+                            <strong>Order Updates</strong>
+                            <p>Get notified about your order status.</p>
+                        </div>
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span></span>
+                        </label>
+                    </div>
+
+                    <div class="setting-row">
+                        <div>
+                            <strong>Promotional Emails</strong>
+                            <p>Receive offers and discounts by email.</p>
+                        </div>
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span></span>
+                        </label>
+                    </div>
+
+                    <div class="setting-row">
+                        <div>
+                            <strong>SMS Alerts</strong>
+                            <p>Get delivery updates via SMS.</p>
+                        </div>
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span></span>
+                        </label>
+                    </div>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </div>
+
+</main>
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script>
+
+    function readStorageObject(key) {
+        try {
+            return JSON.parse(localStorage.getItem(key) || 'null');
+        } catch (error) {
+            return null;
+        }
+    }
+
+    function getLoggedInUser() {
+        const isLoggedIn = localStorage.getItem('freshCartLoggedIn') === 'true';
+        const currentUser = readStorageObject('freshCartCurrentUser');
+        const savedUser = readStorageObject('freshCartUser');
+
+        return isLoggedIn ? (currentUser || savedUser) : null;
+    }
+
+    function renderAccountProfile() {
+        const user = getLoggedInUser();
+
+        if (!user) {
+            window.location.href = 'login.html';
+            return false;
+        }
+
+        const name = user.name || 'Account holder';
+        const phone = user.phone || 'Phone number not added';
+        const email = user.email || 'Email address not added';
+
+        document.getElementById('sidebarName').textContent = name;
+        document.getElementById('sidebarMobile').textContent = phone;
+        document.getElementById('profileName').textContent = name;
+        document.getElementById('profileMobile').textContent = phone;
+        document.getElementById('profileEmail').textContent = email;
+
+        const orders = readStorageObject('orders');
+        const wishlist = readStorageObject('wishlist');
+        document.getElementById('orderCount').textContent = Array.isArray(orders) ? orders.length : 0;
+        document.getElementById('wishlistCountValue').textContent = Array.isArray(wishlist) ? wishlist.length : 0;
+
+        return true;
+    }
+
+    const navItems = document.querySelectorAll('.account-nav-item');
+    const sections = {
+        profile: document.getElementById('profileSection'),
+        orders: document.getElementById('ordersSection'),
+        wishlist: document.getElementById('wishlistSection'),
+        addresses: document.getElementById('addressesSection'),
+        offers: document.getElementById('offersSection'),
+        settings: document.getElementById('settingsSection')
+    };
+
+    function renderOrders() {
+        const orders = JSON.parse(localStorage.getItem('orders') || '[]');
+        const section = sections.orders;
+        section.querySelector('.empty-account-state, .account-order-list')?.remove();
+
+        if (!orders.length) {
+            section.insertAdjacentHTML('beforeend', '<div class="empty-account-state"><div>📦</div><h2>No Orders Yet</h2><p>You haven\'t placed any orders yet.</p><a href="../index.html" class="green-btn">Start Shopping</a></div>');
+            return;
+        }
+
+        const orderItems = orders.slice().reverse().map(order => {
+            const subtotal = Number(order.subtotal) || (order.items || []).reduce((sum, item) => sum + (Number(item.total) || 0), 0);
+            const delivery = Number(order.delivery) || 0;
+            const total = Number(order.total) || subtotal + delivery;
+            return '<div class="account-order-item"><div><h3>Order ' + order.id + '</h3><p>' + (order.date || order.createdAt || '') + '</p><p>Status: ' + (order.status || 'Order Confirmed') + '</p></div><div class="account-order-total"><p>Subtotal: ₹' + subtotal + '</p><p>Delivery: ' + (delivery ? '₹' + delivery : 'FREE') + '</p><strong>Total: ₹' + total + '</strong></div></div>';
+        }).join('');
+
+        section.insertAdjacentHTML('beforeend', '<div class="account-order-list">' + orderItems + '</div>');
+    }
+
+    if (!renderAccountProfile()) {
+        throw new Error('Account page requires an authenticated user.');
+    }
+
+    navItems.forEach(item => {
+        item.addEventListener('click', () => {
+
+            navItems.forEach(i => i.classList.remove('active'));
+            item.classList.add('active');
+
+            Object.values(sections).forEach(section => section.classList.add('hidden'));
+
+            const target = item.getAttribute('data-section');
+            sections[target].classList.remove('hidden');
+            if (target === 'orders') renderOrders();
+
+        });
+    });
+
+    document.getElementById('logoutButton').addEventListener('click', () => {
+        localStorage.removeItem('freshCartLoggedIn');
+        localStorage.removeItem('freshCartCurrentUser');
+        window.location.href = 'login.html';
+    });
+
+</script>
+
+</body>
+
+</html>

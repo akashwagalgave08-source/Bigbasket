@@ -1,0 +1,2084 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="FreshCart - Online Grocery Shopping Website"
+    >
+
+    <title>FreshCart - Online Grocery Store</title>
+
+
+
+    <!-- CSS -->
+   <link rel="stylesheet" href="CSS/style.css">
+
+
+
+</head>
+
+<body data-page="home">
+
+
+
+<!-- =====================================================
+     SECTION 1 → TOP OFFER BAR
+===================================================== -->
+
+
+
+
+
+<!-- =====================================================
+     SECTION 2 → HEADER
+===================================================== -->
+
+<header class="main-header">
+
+    <div class="header-container">
+
+
+        <!-- LOGO -->
+
+        <div class="logo">
+        <a href="index.html">
+        <img
+            src="images/logo.png"
+            alt="Fresh Cart Supermarket"
+        >
+       </a>
+      </div>
+
+        <!-- LOCATION -->
+
+        <button
+            class="location-btn"
+            id="locationBtn"
+        >
+
+            <span class="location-icon">
+                📍
+            </span>
+
+            <span>
+
+                <small>
+                    Deliver to
+                </small>
+
+                <strong id="locationText">
+                    Select Location
+                </strong>
+
+            </span>
+
+        </button>
+
+
+        <!-- SEARCH -->
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search for fruits, vegetables, groceries..."
+                autocomplete="off"
+            >
+
+            <button
+                id="searchButton"
+                aria-label="Search"
+            >
+                🔍
+            </button>
+
+            <div
+                class="search-suggestions"
+                id="searchSuggestions"
+            ></div>
+
+        </div>
+
+
+        <!-- HEADER ACTIONS -->
+
+        <div class="header-actions">
+
+
+            <button
+                class="header-action"
+                id="wishlistHeaderBtn"
+            >
+
+                <span>♡</span>
+
+                <small>
+                    Wishlist
+                </small>
+
+                <b id="wishlistCount">
+                    0
+                </b>
+
+            </button>
+
+
+           
+
+
+            <button
+                class="header-action cart-action"
+                id="cartButton"
+            >
+
+                <span>🛒</span>
+
+                <small>
+                    Cart
+                </small>
+
+                <b id="cartCount">
+                    0
+                </b>
+
+            </button>
+
+             <button
+                class="header-action"
+                id="accountBtn"
+                type="button"
+                aria-label="Open account"
+                hidden
+            >
+
+                <span>👤</span>
+
+                <small id="accountText">
+                    Account
+                </small>
+
+            </button>
+
+        </div>
+
+    
+        <!-- MOBILE MENU -->
+
+        <button
+            class="mobile-menu-btn"
+            id="mobileMenuBtn"
+        >
+            ☰
+        </button>
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     SECTION 3 → NAVIGATION
+===================================================== -->
+
+<nav
+    class="main-nav"
+    id="mainNav"
+>
+
+    <div class="nav-container">
+
+        <a
+            href="#categories"
+            class="active"
+        >
+            Categories
+        </a>
+
+        <a href="#offers">
+            Offers
+        </a>
+
+        <a href="#products">
+            Grocery
+        </a>
+
+        <a href="#products">
+            Fruits & Vegetables
+        </a>
+
+        <a href="#products">
+            Dairy & Bakery
+        </a>
+
+        <a href="#products">
+            Beverages
+        </a>
+
+        <a href="#products">
+            Snacks
+        </a>
+
+        <a href="#products">
+            Personal Care
+        </a>
+
+        <a href="#products">
+            Household
+        </a>
+
+    </div>
+
+</nav>
+
+
+
+<!-- =====================================================
+     SECTION 4 → HERO BANNER
+===================================================== -->
+
+<section class="hero-section">
+
+    <div class="hero-content">
+
+        <div class="hero-text">
+
+            <span class="hero-tag">
+                FRESHNESS DELIVERED
+            </span>
+
+            <h1>
+                Fresh groceries.
+                <br>
+                <span>Happy homes.</span>
+            </h1>
+
+            <p>
+                Get fresh fruits, vegetables, daily essentials
+                and your favourite groceries delivered to your doorstep.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a
+                    href="#products"
+                    class="primary-btn"
+                >
+                    Shop Now →
+                </a>
+
+                <a
+                    href="#offers"
+                    class="view-offers-btn"
+                >
+                    View Offers
+                </a>
+
+            </div>
+
+        </div>
+
+
+       <div class="slider">
+    <img id="image" src="images/banners/image-1.jpg">
+</div>
+
+    </div>
+
+</section>
+
+
+
+
+
+<!-- =====================================================
+     SECTION 5 → QUICK SERVICES
+===================================================== -->
+
+<section class="services-section">
+
+    <div class="feature-card">
+    <div class="feature-icon">⚡</div>
+
+    <div class="feature-content">
+        <h3>Fast Delivery</h3>
+        <p>Get essentials delivered quickly</p>
+    </div>
+</div>
+
+
+    <div class="feature-card">
+
+    <div class="feature-icon">
+        🥬
+    </div>
+
+    <div class="feature-content">
+        <h3>Fresh Products</h3>
+        <p>Carefully selected fresh items</p>
+    </div>
+
+</div>
+
+
+<div class="feature-card">
+
+    <div class="feature-icon">
+        💰
+    </div>
+
+    <div class="feature-content">
+        <h3>Best Prices</h3>
+        <p>Great deals every day</p>
+    </div>
+
+</div>
+
+
+<div class="feature-card">
+
+    <div class="feature-icon">
+        🔒
+    </div>
+
+    <div class="feature-content">
+        <h3>Secure Payment</h3>
+        <p>Safe and secure checkout</p>
+    </div>
+
+</div>
+
+</section>
+
+
+
+
+
+<!-- =====================================================
+     SECTION 6 → SHOP BY CATEGORY
+===================================================== -->
+
+<section
+    class="section"
+    id="categories"
+>
+
+    <div class="section-heading">
+
+        <div>
+
+            <span class="section-label">
+                EXPLORE
+            </span>
+
+            <h2 class="shop">
+                Shop by Category
+            </h2>
+
+        </div>
+
+        <button
+            class="view-all"
+            id="viewAllCategories"
+        >
+            View All →
+        </button>
+
+    </div>
+
+    
+
+
+    <div class="category-grid">
+
+
+        <div
+            class="category-card"
+            data-category="Fruits & Vegetables"
+        >
+
+            <div class="category-image">
+                🍎
+            </div>
+
+            <h3>
+                Fruits & Vegetables
+            </h3>
+
+            <p>
+                Fresh & healthy
+            </p>
+
+        </div>
+
+
+        <div
+            class="category-card"
+            data-category="Dairy & Bakery"
+        >
+
+            <div class="category-image">
+                🥛
+            </div>
+
+            <h3>
+                Dairy & Bakery
+            </h3>
+
+            <p>
+                Milk, bread & more
+            </p>
+
+        </div>
+
+
+        <div
+            class="category-card"
+            data-category="Staples"
+        >
+
+            <div class="category-image">
+                🌾
+            </div>
+
+            <h3>
+                Staples
+            </h3>
+
+            <p>
+                Rice, atta & pulses
+            </p>
+
+        </div>
+
+
+        <div
+            class="category-card"
+            data-category="Snacks"
+        >
+
+            <div class="category-image">
+                🍪
+            </div>
+
+            <h3>
+                Snacks
+            </h3>
+
+            <p>
+                Chips, biscuits & more
+            </p>
+
+        </div>
+
+
+        <div
+            class="category-card"
+            data-category="Beverages"
+        >
+
+            <div class="category-image">
+                🥤
+            </div>
+
+            <h3>
+                Beverages
+            </h3>
+
+            <p>
+                Juices & drinks
+            </p>
+
+        </div>
+
+
+        <div
+            class="category-card"
+            data-category="Personal Care"
+        >
+
+            <div class="category-image">
+                🧴
+            </div>
+
+            <h3>
+                Personal Care
+            </h3>
+
+            <p>
+                Everyday essentials
+            </p>
+
+        </div>
+
+
+        <div
+            class="category-card"
+            data-category="Household"
+        >
+
+            <div class="category-image">
+                🧹
+            </div>
+
+            <h3>
+                Household
+            </h3>
+
+            <p>
+                Cleaning essentials
+            </p>
+
+        </div>
+
+
+        <div
+            class="category-card"
+            data-category="Baby Care"
+        >
+
+            <div class="category-image">
+                🍼
+            </div>
+
+            <h3>
+                Baby Care
+            </h3>
+
+            <p>
+                Baby essentials
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SECTION 7 → OFFERS
+===================================================== -->
+
+<section
+    class="section offers-section"
+    id="offers"
+>
+
+    <div class="section-heading">
+
+        <div>
+
+            <span class="save">
+                SAVE MORE
+            </span>
+
+            <h2>
+                Today's Best Offers
+            </h2>
+
+        </div>
+
+    </div>
+
+
+    <div class="offers-grid">
+
+
+        <div class="offer-card offer-one">
+
+            <div>
+
+                <span>
+                    UP TO
+                </span>
+
+                <strong>
+                    50% OFF
+                </strong>
+
+                <p>
+                    On fresh fruits
+                </p>
+
+                <button>
+                    Shop Now
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="offer-card offer-two">
+
+            <div>
+
+                <span>
+                    SAVE
+                </span>
+
+                <strong>
+                    ₹200
+                </strong>
+
+                <p>
+                    On grocery orders
+                </p>
+
+                <button>
+                    Shop Now
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="offer-card offer-three">
+
+            <div>
+
+                <span>
+                    SPECIAL
+                </span>
+
+                <strong>
+                    BUY 1 GET 1
+                </strong>
+
+                <p>
+                    Selected snacks
+                </p>
+
+                <button>
+                    Explore
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+
+<!-- =====================================================
+     SECTION 8 → POPULAR PRODUCTS
+===================================================== -->
+
+<section
+    class="section"
+    id="products"
+>
+
+    <div class="section-heading">
+
+        <div>
+
+            <span class="shop1">
+                SHOP NOW
+            </span>
+
+            <h2>
+                Popular Products
+            </h2>
+
+        </div>
+
+        <button
+            class="view-all"
+            id="showAllProducts"
+        >
+            View All →
+        </button>
+
+    </div>
+
+    
+
+
+    <!-- FILTER BUTTONS -->
+
+    <div class="filter-buttons">
+
+        <button
+            class="filter-btn active"
+            data-filter="All"
+        >
+            All
+        </button>
+
+        <button
+            class="filter-btn"
+            data-filter="Fruits & Vegetables"
+        >
+            Fruits
+        </button>
+
+        <button
+            class="filter-btn"
+            data-filter="Dairy & Bakery"
+        >
+            Dairy
+        </button>
+
+        <button
+            class="filter-btn"
+            data-filter="Staples"
+        >
+            Staples
+        </button>
+
+        <button
+            class="filter-btn"
+            data-filter="Snacks"
+        >
+            Snacks
+        </button>
+
+        <button
+            class="filter-btn"
+            data-filter="Beverages"
+        >
+            Beverages
+        </button>
+
+    </div>
+
+
+    <!-- SEARCH RESULT -->
+
+    <div
+        class="search-result-info"
+        id="searchResultInfo"
+    ></div>
+
+
+    <!-- PRODUCT GRID -->
+
+    <div
+        class="product-grid"
+        id="productGrid"
+    ></div>
+
+
+    <div
+        class="no-products"
+        id="noProducts"
+    >
+
+        <span>
+            🔎
+        </span>
+
+        <h3>
+            No products found
+        </h3>
+
+        <p>
+            Try searching for another product.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SECTION 9 → TOP DEALS
+===================================================== -->
+
+<section class="section top-deals">
+
+    <div class="section-heading">
+
+        <div>
+
+            <span class="section-label">
+                LIMITED TIME
+            </span>
+
+            <h2 class="top">
+                Top Deals
+            </h2>
+
+        </div>
+
+        <div
+            class="deal-timer"
+            id="dealTimer"
+        >
+            00:00:00
+        </div>
+
+    </div>
+
+
+    <div class="deal-banner">
+
+        <div>
+
+            <span>
+                WEEKEND SPECIAL
+            </span>
+
+            <h2>
+                Extra savings on your
+                grocery basket
+            </h2>
+
+            <p>
+                Use coupon
+                <strong>
+                    SAVE100
+                </strong>
+                and get ₹100 OFF.
+            </p>
+
+            <button
+                class="primary-btn"
+                id="dealShopButton"
+            >
+                Shop Deals
+            </button>
+
+        </div>
+
+        <div class="deal-emoji">
+            🛒
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SECTION 10 → WHY CHOOSE US
+===================================================== -->
+
+<section class="section why-section">
+
+    <div class="section-heading center-heading">
+
+        <div class="fresh-cart">
+
+            <span class="why-us">
+                WHY US
+            </span>
+
+            <h2>
+                Why Choose FreshCart?
+            </h2>
+
+            <p class="fresh">
+                We make everyday grocery shopping simple,
+                affordable and convenient.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="why-grid">
+
+
+        <div class="why-card">
+
+            <span>
+                🥗
+            </span>
+
+            <h3>
+                Farm Fresh
+            </h3>
+
+            <p>
+                Fresh fruits and vegetables sourced
+                with quality in mind.
+            </p>
+
+        </div>
+
+
+        <div class="why-card">
+
+            <span>
+                💸
+            </span>
+
+            <h3>
+                Great Value
+            </h3>
+
+            <p>
+                Attractive prices and regular offers
+                to help you save more.
+            </p>
+
+        </div>
+
+
+        <div class="why-card">
+
+            <span>
+                🚚
+            </span>
+
+            <h3>
+                Easy Delivery
+            </h3>
+
+            <p>
+                Convenient delivery options for
+                your everyday shopping.
+            </p>
+
+        </div>
+
+
+        <div class="why-card">
+
+            <span>
+                ⭐
+            </span>
+
+            <h3>
+                Trusted Quality
+            </h3>
+
+            <p>
+                Quality products from brands you know
+                and trust.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SECTION 11 → APP / SERVICES
+===================================================== -->
+
+<section class="app-section">
+
+    <div class="app-content">
+
+        <span class="section-label">
+            SHOP ANYWHERE
+        </span>
+
+        <h2>
+            Grocery shopping
+            made easier
+        </h2>
+
+        <p>
+            Browse products, manage your basket,
+            save favourites and shop from any device.
+        </p>
+
+        <div class="app-buttons">
+
+            <button>
+                📱 Get the App
+            </button>
+
+            <button>
+                🌐 Shop Online
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <div class="app-visual">
+
+        <div class="phone-mockup">
+
+            <div class="phone-screen">
+
+                <div class="phone-header">
+                    FreshCart
+                </div>
+
+                <div class="phone-product">
+                    🍎
+                </div>
+
+                <h3>
+                    Fresh Apples
+                </h3>
+
+                <strong>
+                    ₹99/kg
+                </strong>
+
+                <button>
+                    Add to Basket
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SECTION 12 → NEWSLETTER
+===================================================== -->
+
+<section class="newsletter-section">
+
+    <div>
+
+        <span>
+            STAY UPDATED
+        </span>
+
+        <h2>
+            Get offers directly in your inbox
+        </h2>
+
+        <p>
+            Subscribe to receive special offers,
+            grocery tips and new arrivals.
+        </p>
+
+    </div>
+
+
+    <form id="newsletterForm">
+
+        <input
+            type="email"
+            id="newsletterEmail"
+            placeholder="Enter your email"
+            required
+        >
+
+        <button type="submit">
+            Subscribe
+        </button>
+
+    </form>
+
+</section>
+
+
+
+<!-- =====================================================
+     SECTION 13 → FOOTER
+===================================================== -->
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+
+        <div class="footer-column footer-about">
+
+            <div class="footer-logo">
+                <span>fresh</span>
+                <strong>cart</strong>
+            </div>
+
+            <p>
+                Your everyday grocery destination for
+                fresh products, great prices and convenient
+                shopping.
+            </p>
+
+            <div class="social-icons">
+
+                <a href="#">f</a>
+                <a href="#">𝕏</a>
+                <a href="#">◎</a>
+                <a href="#">▶</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>
+                Company
+            </h3>
+
+            <a href="#">
+                About Us
+            </a>
+
+            <a href="#">
+                Careers
+            </a>
+
+            <a href="#">
+                Contact Us
+            </a>
+
+            <a href="#">
+                Blog
+            </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>
+                Help
+            </h3>
+
+            <a href="#">
+                FAQs
+            </a>
+
+            <a href="#">
+                Delivery Information
+            </a>
+
+            <a href="#">
+                Returns
+            </a>
+
+            <a href="#">
+                Privacy Policy
+            </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>
+                Shop
+            </h3>
+
+            <a href="#products">
+                Fruits & Vegetables
+            </a>
+
+            <a href="#products">
+                Dairy & Bakery
+            </a>
+
+            <a href="#products">
+                Snacks
+            </a>
+
+            <a href="#products">
+                Household
+            </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>
+                Contact
+            </h3>
+
+            <p>
+                📍 Pune, Maharashtra
+            </p>
+
+            <p>
+                📞 +91 98765 43210
+            </p>
+
+            <p>
+                ✉ support@freshcart.com
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 FreshCart. All Rights Reserved.
+        </p>
+
+        <div>
+            🔒 Secure Shopping
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =====================================================
+     SECTION 14 → PRODUCT MODAL
+===================================================== -->
+
+<div
+    class="modal-overlay"
+    id="productModal"
+>
+
+    <div class="product-modal">
+
+        <button
+            class="modal-close"
+            id="modalClose"
+        >
+            ×
+        </button>
+
+        <div
+            id="modalContent"
+            class="modal-content"
+        ></div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     SECTION 15 → CART SIDEBAR
+===================================================== -->
+
+<div
+    class="cart-overlay"
+    id="cartOverlay"
+></div>
+
+
+<aside
+    class="cart-sidebar"
+    id="cartSidebar"
+>
+
+    <div class="cart-header">
+
+        <h2>
+            My Basket
+        </h2>
+
+        <button
+            id="closeCart"
+        >
+            ×
+        </button>
+
+    </div>
+
+
+    <div
+        class="cart-items"
+        id="cartItems"
+    ></div>
+
+
+    <div
+        class="empty-cart"
+        id="emptyCart"
+    >
+
+        <span>
+            🛒
+        </span>
+
+        <h3>
+            Your basket is empty
+        </h3>
+
+        <p>
+            Add some delicious products!
+        </p>
+
+        <button
+            class="primary-btn"
+            id="startShopping"
+        >
+            Start Shopping
+        </button>
+
+    </div>
+
+
+    <div
+        class="cart-summary"
+        id="cartSummary"
+    >
+
+        <div>
+            <span>
+                Subtotal
+            </span>
+
+            <strong id="cartSubtotal">
+                ₹0
+            </strong>
+        </div>
+
+
+        <div>
+            <span>
+                Delivery
+            </span>
+
+            <strong id="deliveryCharge">
+                FREE
+            </strong>
+        </div>
+
+
+        <div class="coupon-box">
+
+            <input
+                type="text"
+                id="couponInput"
+                placeholder="Coupon code"
+            >
+
+            <button id="applyCoupon">
+                Apply
+            </button>
+
+        </div>
+
+
+        <p
+            id="couponMessage"
+            class="coupon-message"
+        ></p>
+
+
+        <div class="cart-total">
+
+            <span>
+                Total
+            </span>
+
+            <strong id="cartTotal">
+                ₹0
+            </strong>
+
+        </div>
+
+        <div>
+            <a href="pages/checkout.html" class="checkout-btn" id="checkoutButton" type="button">
+                Proceed to Checkout
+            </a>
+        </div>
+
+</aside>
+
+
+
+<!-- =========================================================
+     SECTION 13 → CHECKOUT / PAYMENT SECTION
+========================================================= -->
+
+
+
+<div
+    class="payment-overlay"
+    id="paymentOverlay"
+>
+
+    <div class="payment-modal">
+
+        <!-- =========================================
+             PAYMENT HEADER
+        ========================================== -->
+
+        <div class="payment-header">
+
+            <div>
+                <span class="payment-step">
+                    CHECKOUT
+                </span>
+
+                <h2>
+                    Secure Payment
+                </h2>
+            </div>
+
+            <button
+                class="payment-close"
+                id="paymentClose"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+        <!-- =========================================
+             CHECKOUT STEPS
+        ========================================== -->
+
+        <div class="checkout-steps">
+
+            <div class="checkout-step active">
+                <span>1</span>
+                <p>Cart</p>
+            </div>
+
+            <div class="step-line"></div>
+
+            <div class="checkout-step active">
+                <span>2</span>
+                <p>Address</p>
+            </div>
+
+            <div class="step-line"></div>
+
+            <div class="checkout-step active">
+                <span>3</span>
+                <p>Payment</p>
+            </div>
+
+        </div>
+
+
+        <!-- =========================================
+             PAYMENT CONTENT
+        ========================================== -->
+
+        <div class="payment-content">
+
+
+            <!-- =====================================
+                 LEFT SIDE
+            ====================================== -->
+
+            <div class="payment-left">
+
+
+                <!-- DELIVERY ADDRESS -->
+
+                <div class="payment-card">
+
+                    <div class="payment-card-heading">
+
+                        <h3>
+                            📍 Delivery Address
+                        </h3>
+
+                        <button
+                            type="button"
+                            class="change-address"
+                        >
+                            Change
+                        </button>
+
+                    </div>
+
+
+                    <div class="address-box">
+
+                        <strong>
+                            Home
+                        </strong>
+
+                        <p>
+                            Akash
+                        </p>
+
+                        <p>
+                            Pune, Maharashtra, India
+                        </p>
+
+                        <p>
+                            📞 +91 8767559157
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =====================================
+                     PAYMENT METHODS
+                ====================================== -->
+
+                <div class="payment-card">
+
+                    <h3>
+                        💳 Select Payment Method
+                    </h3>
+
+
+                    <div class="payment-methods">
+
+
+                        <!-- UPI -->
+
+                        <button
+                            type="button"
+                            class="payment-method active"
+                            data-method="upi"
+                        >
+
+                            <span class="method-icon">
+                                📱
+                            </span>
+
+                            <span class="method-info">
+
+                                <strong>
+                                    UPI
+                                </strong>
+
+                                <small>
+                                    Google Pay, PhonePe, Paytm
+                                </small>
+
+                            </span>
+
+                            <span class="method-radio">
+                                ●
+                            </span>
+
+                        </button>
+
+
+                        <!-- CARD -->
+
+                        <button
+                            type="button"
+                            class="payment-method"
+                            data-method="card"
+                        >
+
+                            <span class="method-icon">
+                                💳
+                            </span>
+
+                            <span class="method-info">
+
+                                <strong>
+                                    Credit / Debit Card
+                                </strong>
+
+                                <small>
+                                    Visa, Mastercard, RuPay
+                                </small>
+
+                            </span>
+
+                            <span class="method-radio">
+                                ○
+                            </span>
+
+                        </button>
+
+
+                        <!-- NET BANKING -->
+
+                        <button
+                            type="button"
+                            class="payment-method"
+                            data-method="netbanking"
+                        >
+
+                            <span class="method-icon">
+                                🏦
+                            </span>
+
+                            <span class="method-info">
+
+                                <strong>
+                                    Net Banking
+                                </strong>
+
+                                <small>
+                                    All major banks supported
+                                </small>
+
+                            </span>
+
+                            <span class="method-radio">
+                                ○
+                            </span>
+
+                        </button>
+
+
+                        <!-- COD -->
+
+                        <button
+                            type="button"
+                            class="payment-method"
+                            data-method="cod"
+                        >
+
+                            <span class="method-icon">
+                                💵
+                            </span>
+
+                            <span class="method-info">
+
+                                <strong>
+                                    Cash on Delivery
+                                </strong>
+
+                                <small>
+                                    Pay when your order arrives
+                                </small>
+
+                            </span>
+
+                            <span class="method-radio">
+                                ○
+                            </span>
+
+                        </button>
+
+                    </div>
+
+
+                    <!-- =====================================
+                         UPI FORM
+                    ====================================== -->
+
+                    <div
+                        class="payment-form"
+                        id="upiForm"
+                    >
+
+                        <label>
+                            Enter UPI ID
+                        </label>
+
+                        <div class="input-with-button">
+
+                            <input
+                                type="text"
+                                id="upiId"
+                                placeholder="example@upi"
+                            >
+
+                            <button
+                                type="button"
+                                id="verifyUpi"
+                            >
+                                Verify
+                            </button>
+
+                        </div>
+
+                        <p
+                            class="payment-message"
+                            id="upiMessage"
+                        ></p>
+
+                    </div>
+
+
+                    <!-- =====================================
+                         CARD FORM
+                    ====================================== -->
+
+                    <div
+                        class="payment-form hidden"
+                        id="cardForm"
+                    >
+
+                        <label>
+                            Card Number
+                        </label>
+
+                        <input
+                            type="text"
+                            id="cardNumber"
+                            placeholder="1234 5678 9012 3456"
+                            maxlength="19"
+                        >
+
+
+                        <div class="card-row">
+
+                            <div>
+
+                                <label>
+                                    Expiry Date
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="cardExpiry"
+                                    placeholder="MM/YY"
+                                    maxlength="5"
+                                >
+
+                            </div>
+
+
+                            <div>
+
+                                <label>
+                                    CVV
+                                </label>
+
+                                <input
+                                    type="password"
+                                    id="cardCvv"
+                                    placeholder="•••"
+                                    maxlength="3"
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <label>
+                            Name on Card
+                        </label>
+
+                        <input
+                            type="text"
+                            id="cardName"
+                            placeholder="Enter card holder name"
+                        >
+
+                    </div>
+
+
+                    <!-- =====================================
+                         NET BANKING FORM
+                    ====================================== -->
+
+                    <div
+                        class="payment-form hidden"
+                        id="netbankingForm"
+                    >
+
+                        <label>
+                            Select Bank
+                        </label>
+
+                        <select id="bankSelect">
+
+                            <option value="">
+                                Select your bank
+                            </option>
+
+                            <option>
+                                State Bank of India
+                            </option>
+
+                            <option>
+                                HDFC Bank
+                            </option>
+
+                            <option>
+                                ICICI Bank
+                            </option>
+
+                            <option>
+                                Axis Bank
+                            </option>
+
+                            <option>
+                                Kotak Mahindra Bank
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- =====================================
+                         COD MESSAGE
+                    ====================================== -->
+
+                    <div
+                        class="payment-form hidden cod-message-box"
+                        id="codForm"
+                    >
+
+                        <div class="cod-icon">
+                            💵
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Cash on Delivery
+                            </strong>
+
+                            <p>
+                                Pay in cash when your order is delivered.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+            <!-- =========================================
+                 RIGHT SIDE → ORDER SUMMARY
+            ========================================== -->
+
+            <div class="payment-right">
+
+                <div class="order-summary-card">
+
+                    <h3>
+                        Order Summary
+                    </h3>
+
+
+                    <div class="summary-row">
+
+                        <span>
+                            Items
+                        </span>
+
+                        <span id="paymentItemCount">
+                            3 items
+                        </span>
+
+                    </div>
+
+
+                    <div class="summary-row">
+
+                        <span>
+                            Subtotal
+                        </span>
+
+                        <span id="paymentSubtotal">
+                            ₹949
+                        </span>
+
+                    </div>
+
+
+                    <div class="summary-row">
+
+                        <span>
+                            Delivery
+                        </span>
+
+                        <span id="paymentDelivery">
+                            ₹40
+                        </span>
+
+                    </div>
+
+
+                    <div class="summary-row discount-row">
+
+                        <span>
+                            Discount
+                        </span>
+
+                        <span>
+                            -₹0
+                        </span>
+
+                    </div>
+
+
+                    <div class="summary-divider"></div>
+
+
+                    <div class="summary-total">
+
+                        <span>
+                            Total Amount
+                        </span>
+
+                        <strong id="paymentTotal">
+                            ₹989
+                        </strong>
+
+                    </div>
+
+
+                    <!-- SECURITY -->
+
+                    <div class="secure-payment">
+
+                        <span>
+                            🔒
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Safe & Secure Payment
+                            </strong>
+
+                            <p>
+                                Your payment information is protected.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- PLACE ORDER -->
+
+                    <button
+                        type="button"
+                        class="place-order-btn"
+                        id="placeOrderBtn"
+                    >
+
+                        <span>
+                            🔒
+                        </span>
+
+                        Place Order
+
+                    </button>
+
+
+                    <p class="terms-text">
+
+                        By placing your order, you agree to our
+                        <a href="#">
+                            Terms & Conditions
+                        </a>
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================================
+     ORDER SUCCESS POPUP
+========================================================= -->
+
+<div
+    class="order-success-overlay"
+    id="orderSuccessOverlay"
+>
+
+    <div class="order-success">
+
+        <div class="success-icon">
+            ✓
+        </div>
+
+        <h2>
+            Order Placed Successfully!
+        </h2>
+
+        <p>
+            Thank you for shopping with BigBasket.
+        </p>
+
+        <p class="order-number">
+            Order ID:
+            <strong id="orderId">
+                BB000000
+            </strong>
+        </p>
+
+        <button
+            id="continueShoppingBtn"
+        >
+            Continue Shopping
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     SECTION 16 → TOAST
+===================================================== -->
+
+<div
+    class="toast"
+    id="toast"
+>
+
+    <span id="toastIcon">
+        ✓
+    </span>
+
+    <p id="toastMessage">
+        Product added
+    </p>
+
+</div>
+
+
+
+<!-- =====================================================
+     SECTION 17 → BACK TO TOP
+===================================================== -->
+
+<button
+    class="back-to-top"
+    id="backToTop"
+>
+    ↑
+</button>
+
+
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script src="JS/script.js?v=20260917"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,1753 @@
+/* =========================================================
+   ACCOUNT PAGE
+========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   TOP BAR
+========================================================= */
+
+.account-topbar {
+
+    height: 30px;
+
+    background: #1b5e20;
+
+    color: white;
+
+}
+
+
+.account-topbar-container {
+
+    width: 92%;
+
+    max-width: 1300px;
+
+    margin: auto;
+
+    height: 100%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+}
+
+
+.account-top-links {
+
+    display: flex;
+
+    gap: 25px;
+
+}
+
+
+.account-top-links a {
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.account-header {
+
+    background: white;
+
+    border-bottom: 1px solid #ddd;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 100;
+
+}
+
+
+.account-header-container {
+
+    width: 92%;
+
+    max-width: 1300px;
+
+    margin: auto;
+
+    min-height: 82px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 35px;
+
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.account-logo {
+
+    min-width: 180px;
+
+}
+
+
+.account-logo a {
+
+    text-decoration: none;
+
+    font-size: 30px;
+
+}
+
+
+.account-logo span {
+
+    color: #222;
+
+    font-weight: 700;
+
+}
+
+
+.account-logo strong {
+
+    color: #84c225;
+
+}
+
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+.account-search {
+
+    flex: 1;
+
+    display: flex;
+
+    height: 45px;
+
+    max-width: 650px;
+
+}
+
+
+.account-search input {
+
+    flex: 1;
+
+    border: 1px solid #ddd;
+
+    border-right: none;
+
+    border-radius: 7px 0 0 7px;
+
+    padding: 0 15px;
+
+    outline: none;
+
+    font-size: 14px;
+
+}
+
+
+.account-search input:focus {
+
+    border-color: #84c225;
+
+}
+
+
+.account-search button {
+
+    width: 60px;
+
+    border: none;
+
+    background: #84c225;
+
+    color: white;
+
+    border-radius: 0 7px 7px 0;
+
+    cursor: pointer;
+
+    font-size: 17px;
+
+}
+
+
+/* =========================================================
+   ACTIONS
+========================================================= */
+
+.account-actions {
+
+    margin-left: auto;
+
+    display: flex;
+
+    gap: 25px;
+
+}
+
+
+.account-action {
+
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 5px;
+
+    color: #222;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+}
+
+
+.account-action.active {
+
+    color: #579d20;
+
+}
+
+
+.action-icon {
+
+    position: relative;
+
+    font-size: 21px;
+
+}
+
+
+.action-badge {
+
+    position: absolute;
+
+    top: -10px;
+
+    right: -12px;
+
+    min-width: 19px;
+
+    height: 19px;
+
+    padding: 0 4px;
+
+    border-radius: 20px;
+
+    background: #ff6d00;
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+}
+
+
+/* =========================================================
+   PAGE
+========================================================= */
+
+.account-page {
+
+    width: 92%;
+
+    max-width: 1300px;
+
+    margin: auto;
+
+    padding: 25px 0 60px;
+
+}
+
+
+.account-breadcrumb {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    font-size: 13px;
+
+    margin-bottom: 25px;
+
+}
+
+
+.account-breadcrumb a {
+
+    color: #579d20;
+
+    text-decoration: none;
+
+}
+
+
+/* =========================================================
+   LAYOUT
+========================================================= */
+
+.account-layout {
+
+    display: grid;
+
+    grid-template-columns: 280px 1fr;
+
+    gap: 25px;
+
+    align-items: start;
+
+}
+
+
+/* =========================================================
+   SIDEBAR
+========================================================= */
+
+.account-sidebar {
+
+    background: white;
+
+    border: 1px solid #e3e3e3;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    position: sticky;
+
+    top: 105px;
+
+}
+
+
+.sidebar-profile {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 20px;
+
+    background: #f4fbeB;
+
+    border-bottom: 1px solid #e3e3e3;
+
+}
+
+
+.sidebar-avatar {
+
+    width: 50px;
+
+    height: 50px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: #84c225;
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 21px;
+
+}
+
+
+.sidebar-profile h3 {
+
+    margin: 0 0 4px;
+
+    font-size: 15px;
+
+}
+
+
+.sidebar-profile p {
+
+    margin: 0;
+
+    color: #777;
+
+    font-size: 11px;
+
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.account-navigation {
+
+    padding: 10px;
+
+}
+
+
+.account-nav-item {
+
+    width: 100%;
+
+    border: none;
+
+    background: transparent;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 14px 12px;
+
+    border-radius: 7px;
+
+    cursor: pointer;
+
+    color: #333;
+
+    text-align: left;
+
+}
+
+
+.account-nav-item > span {
+
+    flex: 1;
+
+}
+
+
+.account-nav-item > i:first-child {
+
+    width: 20px;
+
+    text-align: center;
+
+}
+
+
+.account-nav-item > i:last-child {
+
+    font-size: 10px;
+
+    color: #999;
+
+}
+
+
+.account-nav-item:hover {
+
+    background: #f5f9f1;
+
+    color: #579d20;
+
+}
+
+
+.account-nav-item.active {
+
+    background: #edf7df;
+
+    color: #579d20;
+
+    font-weight: 600;
+
+}
+
+
+/* =========================================================
+   LOGOUT
+========================================================= */
+
+.sidebar-logout {
+
+    width: calc(100% - 20px);
+
+    margin: 5px 10px 15px;
+
+    height: 42px;
+
+    border: 1px solid #e53935;
+
+    background: white;
+
+    color: #e53935;
+
+    border-radius: 7px;
+
+    cursor: pointer;
+
+    font-weight: 600;
+
+}
+
+
+.sidebar-logout:hover {
+
+    background: #fff3f3;
+
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.account-content {
+
+    min-width: 0;
+
+}
+
+
+.account-card {
+
+    background: white;
+
+    border: 1px solid #e3e3e3;
+
+    border-radius: 12px;
+
+    padding: 35px;
+
+}
+
+
+/* =========================================================
+   LOGIN
+========================================================= */
+
+.login-card {
+
+    max-width: 500px;
+
+    margin: auto;
+
+    text-align: center;
+
+}
+
+
+.login-icon {
+
+    width: 70px;
+
+    height: 70px;
+
+    margin: 0 auto 15px;
+
+    border-radius: 50%;
+
+    background: #edf7df;
+
+    color: #579d20;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 28px;
+
+}
+
+
+.login-card h1 {
+
+    margin: 0 0 8px;
+
+    font-size: 25px;
+
+}
+
+
+.login-card > p {
+
+    margin: 0 0 25px;
+
+    color: #777;
+
+    font-size: 13px;
+
+}
+
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.form-group {
+
+    text-align: left;
+
+    margin-bottom: 18px;
+
+}
+
+
+.form-group label {
+
+    display: block;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    margin-bottom: 7px;
+
+}
+
+
+.form-group > input {
+
+    width: 100%;
+
+    height: 46px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 7px;
+
+    padding: 0 13px;
+
+    outline: none;
+
+}
+
+
+.form-group > input:focus {
+
+    border-color: #84c225;
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+.mobile-field {
+
+    display: flex;
+
+    height: 46px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 7px;
+
+    overflow: hidden;
+
+}
+
+
+.mobile-field:focus-within {
+
+    border-color: #84c225;
+
+}
+
+
+.mobile-field span {
+
+    width: 50px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #f5f5f5;
+
+    border-right: 1px solid #ddd;
+
+    font-size: 13px;
+
+}
+
+
+.mobile-field input {
+
+    flex: 1;
+
+    border: none;
+
+    outline: none;
+
+    padding: 0 12px;
+
+}
+
+
+/* =========================================================
+   PASSWORD
+========================================================= */
+
+.password-field {
+
+    display: flex;
+
+    height: 46px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 7px;
+
+    overflow: hidden;
+
+}
+
+
+.password-field input {
+
+    flex: 1;
+
+    border: none;
+
+    outline: none;
+
+    padding: 0 12px;
+
+}
+
+
+.password-field button {
+
+    width: 45px;
+
+    border: none;
+
+    background: white;
+
+    cursor: pointer;
+
+    color: #777;
+
+}
+
+
+/* =========================================================
+   LOGIN OPTIONS
+========================================================= */
+
+.login-options {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 20px;
+
+    font-size: 12px;
+
+}
+
+
+.login-options label {
+
+    display: flex;
+
+    gap: 6px;
+
+}
+
+
+.login-options a {
+
+    color: #579d20;
+
+    text-decoration: none;
+
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.account-green-button {
+
+    width: 100%;
+
+    min-height: 46px;
+
+    display: inline-flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background: #84c225;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    padding: 10px 20px;
+
+}
+
+
+.account-green-button:hover {
+
+    background: #6da91c;
+
+}
+
+
+.create-account-button {
+
+    width: 100%;
+
+    height: 46px;
+
+    border: 1px solid #84c225;
+
+    border-radius: 7px;
+
+    background: white;
+
+    color: #579d20;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+}
+
+
+.create-account-button:hover {
+
+    background: #f5faef;
+
+}
+
+
+/* =========================================================
+   DIVIDER
+========================================================= */
+
+.login-divider {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin: 22px 0;
+
+    color: #999;
+
+    font-size: 11px;
+
+}
+
+
+.login-divider::before,
+.login-divider::after {
+
+    content: "";
+
+    flex: 1;
+
+    border-top: 1px solid #ddd;
+
+}
+
+
+/* =========================================================
+   PROFILE
+========================================================= */
+
+.content-heading {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 20px;
+
+}
+
+
+.content-heading h1 {
+
+    margin: 0 0 5px;
+
+    font-size: 26px;
+
+}
+
+
+.content-heading p {
+
+    margin: 0;
+
+    color: #777;
+
+    font-size: 13px;
+
+}
+
+
+.profile-card {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    background: white;
+
+    border: 1px solid #ddd;
+
+    border-radius: 12px;
+
+    padding: 25px;
+
+}
+
+
+.large-profile-avatar {
+
+    width: 85px;
+
+    height: 85px;
+
+    border-radius: 50%;
+
+    background: #84c225;
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 32px;
+
+}
+
+
+.profile-information {
+
+    flex: 1;
+
+}
+
+
+.profile-information h2 {
+
+    margin: 0 0 7px;
+
+    font-size: 20px;
+
+}
+
+
+.profile-information p {
+
+    margin: 4px 0;
+
+    color: #777;
+
+    font-size: 13px;
+
+}
+
+
+.edit-profile-button {
+
+    border: 1px solid #84c225;
+
+    color: #579d20;
+
+    background: white;
+
+    border-radius: 6px;
+
+    padding: 10px 15px;
+
+    cursor: pointer;
+
+}
+
+
+/* =========================================================
+   PROFILE STATS
+========================================================= */
+
+.profile-stats {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 15px;
+
+    margin-top: 20px;
+
+}
+
+
+.profile-stats > div {
+
+    padding: 22px;
+
+    background: white;
+
+    border: 1px solid #ddd;
+
+    border-radius: 10px;
+
+    text-align: center;
+
+}
+
+
+.profile-stats strong {
+
+    display: block;
+
+    color: #579d20;
+
+    font-size: 23px;
+
+}
+
+
+.profile-stats span {
+
+    color: #777;
+
+    font-size: 12px;
+
+}
+
+
+/* =========================================================
+   EMPTY STATES
+========================================================= */
+
+.empty-account-state {
+
+    padding: 70px 20px;
+
+    background: white;
+
+    border: 1px solid #ddd;
+
+    border-radius: 12px;
+
+    text-align: center;
+
+}
+
+
+.empty-account-state > div {
+
+    font-size: 55px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.empty-account-state h2 {
+
+    margin: 0 0 8px;
+
+}
+
+
+.empty-account-state p {
+
+    color: #777;
+
+    font-size: 13px;
+
+    margin-bottom: 22px;
+
+}
+
+
+/* =========================================================
+   ADDRESS
+========================================================= */
+
+.add-address-button {
+
+    border: none;
+
+    background: #84c225;
+
+    color: white;
+
+    padding: 10px 16px;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    font-weight: 600;
+
+}
+
+
+.empty-address {
+
+    padding: 60px 20px;
+
+    text-align: center;
+
+    background: white;
+
+    border: 1px solid #ddd;
+
+    border-radius: 12px;
+
+}
+
+
+.empty-address i {
+
+    font-size: 40px;
+
+    color: #84c225;
+
+}
+
+
+.empty-address h3 {
+
+    margin-bottom: 5px;
+
+}
+
+
+.empty-address p {
+
+    color: #777;
+
+    font-size: 13px;
+
+}
+
+
+/* =========================================================
+   OFFERS
+========================================================= */
+
+.offers-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 18px;
+
+}
+
+
+.reward-card {
+
+    padding: 25px;
+
+    border-radius: 12px;
+
+    border: 1px solid #ddd;
+
+    background: linear-gradient(
+        135deg,
+        #f5fbeF,
+        white
+    );
+
+}
+
+
+.reward-card > div {
+
+    font-size: 35px;
+
+}
+
+
+.reward-card h3 {
+
+    margin: 15px 0 8px;
+
+}
+
+
+.reward-card p {
+
+    color: #777;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+
+}
+
+
+.reward-card strong {
+
+    display: inline-block;
+
+    margin-top: 10px;
+
+    padding: 7px 10px;
+
+    border-radius: 5px;
+
+    background: #edf7df;
+
+    color: #579d20;
+
+    font-size: 11px;
+
+}
+
+
+/* =========================================================
+   SETTINGS
+========================================================= */
+
+.settings-card {
+
+    background: white;
+
+    border: 1px solid #ddd;
+
+    border-radius: 12px;
+
+}
+
+
+.setting-row {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 20px;
+
+    border-bottom: 1px solid #eee;
+
+}
+
+
+.setting-row:last-child {
+
+    border-bottom: none;
+
+}
+
+
+.setting-row strong {
+
+    display: block;
+
+    margin-bottom: 5px;
+
+}
+
+
+.setting-row p {
+
+    margin: 0;
+
+    color: #777;
+
+    font-size: 12px;
+
+}
+
+
+/* =========================================================
+   SWITCH
+========================================================= */
+
+.switch {
+
+    position: relative;
+
+    width: 45px;
+
+    height: 24px;
+
+}
+
+
+.switch input {
+
+    opacity: 0;
+
+    width: 0;
+
+    height: 0;
+
+}
+
+
+.switch span {
+
+    position: absolute;
+
+    inset: 0;
+
+    background: #ccc;
+
+    border-radius: 20px;
+
+    cursor: pointer;
+
+}
+
+
+.switch span::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 18px;
+
+    height: 18px;
+
+    left: 3px;
+
+    top: 3px;
+
+    background: white;
+
+    border-radius: 50%;
+
+    transition: 0.2s;
+
+}
+
+
+.switch input:checked + span {
+
+    background: #84c225;
+
+}
+
+
+.switch input:checked + span::before {
+
+    transform: translateX(21px);
+
+}
+
+
+/* =========================================================
+   HIDDEN
+========================================================= */
+
+.hidden {
+
+    display: none !important;
+
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.account-footer {
+
+    background: #222;
+
+    color: white;
+
+}
+
+
+.account-footer-container {
+
+    width: 92%;
+
+    max-width: 1300px;
+
+    margin: auto;
+
+    padding: 40px 0;
+
+    display: grid;
+
+    grid-template-columns:
+        2fr 1fr 1fr;
+
+    gap: 40px;
+
+}
+
+
+.account-footer h3 {
+
+    color: #84c225;
+
+    font-size: 25px;
+
+}
+
+
+.account-footer h4 {
+
+    margin-bottom: 15px;
+
+}
+
+
+.account-footer p {
+
+    color: #bbb;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+
+}
+
+
+.account-footer a {
+
+    display: block;
+
+    color: #bbb;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    margin-bottom: 9px;
+
+}
+
+
+.account-footer a:hover {
+
+    color: #84c225;
+
+}
+
+
+.account-footer-bottom {
+
+    text-align: center;
+
+    border-top: 1px solid #444;
+
+    padding: 15px;
+
+    color: #999;
+
+    font-size: 12px;
+
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .account-header-container {
+
+        gap: 15px;
+
+    }
+
+    .account-logo {
+
+        min-width: auto;
+
+    }
+
+    .account-logo a {
+
+        font-size: 24px;
+
+    }
+
+    .account-layout {
+
+        grid-template-columns: 230px 1fr;
+
+    }
+
+    .offers-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    .account-topbar {
+
+        display: none;
+
+    }
+
+
+    .account-header-container {
+
+        flex-wrap: wrap;
+
+        padding: 12px 0;
+
+    }
+
+
+    .account-search {
+
+        order: 3;
+
+        flex-basis: 100%;
+
+        max-width: none;
+
+    }
+
+
+    .account-actions {
+
+        gap: 15px;
+
+    }
+
+
+    .account-layout {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .account-sidebar {
+
+        position: static;
+
+    }
+
+
+    .account-navigation {
+
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 5px;
+
+    }
+
+
+    .account-nav-item {
+
+        font-size: 12px;
+
+    }
+
+
+    .account-nav-item > i:last-child {
+
+        display: none;
+
+    }
+
+
+    .profile-card {
+
+        flex-wrap: wrap;
+
+    }
+
+
+    .profile-information {
+
+        min-width: 150px;
+
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .account-page {
+
+        width: 94%;
+
+        padding-top: 15px;
+
+    }
+
+
+    .account-header-container {
+
+        width: 94%;
+
+    }
+
+
+    .account-logo a {
+
+        font-size: 21px;
+
+    }
+
+
+    .account-actions {
+
+        gap: 8px;
+
+    }
+
+
+    .account-action {
+
+        font-size: 10px;
+
+    }
+
+
+    .account-card {
+
+        padding: 22px 16px;
+
+    }
+
+
+    .account-navigation {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .profile-stats {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .profile-card {
+
+        text-align: center;
+
+        justify-content: center;
+
+    }
+
+
+    .profile-information {
+
+        width: 100%;
+
+    }
+
+
+    .content-heading {
+
+        align-items: flex-start;
+
+        gap: 15px;
+
+        flex-direction: column;
+
+    }
+
+
+    .account-footer-container {
+
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+
+    }
+
+}

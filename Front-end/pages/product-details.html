@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Product Details - FreshBasket</title>
+
+    <link
+        rel="stylesheet"
+        href="../CSS/style.css">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body data-page="productDetails">
+
+
+<header class="main-header">
+
+    <div class="container header-content">
+
+        <div class="logo">
+
+            <a href="../index.html">
+
+                <span>fresh</span>
+                <strong>basket</strong>
+
+            </a>
+
+        </div>
+
+
+        <div class="search-box">
+
+            <input
+                id="searchInput"
+                type="text"
+                placeholder="Search products...">
+
+            <button id="searchButton">
+
+                <i class="fa-solid fa-search"></i>
+
+            </button>
+
+            <div
+                class="search-results"
+                id="searchResults">
+            </div>
+
+        </div>
+
+
+        <div class="header-actions">
+
+            <a
+                href="wishlist.html"
+                class="icon-btn">
+
+                <i class="fa-regular fa-heart"></i>
+
+                <span
+                    class="badge"
+                    id="wishlistCount">
+                    0
+                </span>
+
+            </a>
+
+
+            <a
+                href="cart.html"
+                class="cart-btn">
+
+                <i class="fa-solid fa-cart-shopping"></i>
+
+                Cart
+
+                <b id="cartCount">
+                    0
+                </b>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<main class="product-details-page">
+
+    <div class="container">
+
+        <div
+            id="productDetails">
+        </div>
+
+
+        <section class="section">
+
+            <div class="section-heading">
+
+                <h2>
+                    You May Also Like
+                </h2>
+
+            </div>
+
+
+            <div
+                class="product-grid"
+                id="relatedProducts">
+            </div>
+
+        </section>
+
+    </div>
+
+</main>
+
+
+<div
+    class="toast"
+    id="toast">
+
+    <i class="fa-solid fa-circle-check"></i>
+
+    <span id="toastMessage"></span>
+
+</div>
+
+
+<script src="../JS/script.js"></script>
+
+</body>
+
+</html>

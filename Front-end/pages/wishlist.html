@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Wishlist - FreshBasket</title>
+
+    <link
+        rel="stylesheet"
+        href="../CSS/style.css">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body data-page="wishlist">
+
+
+<header class="main-header">
+
+    <div class="container header-content">
+
+        <div class="logo">
+
+            <a href="../index.html">
+
+                <span>fresh</span>
+                <strong>basket</strong>
+
+            </a>
+
+        </div>
+
+
+        <a
+            href="products.html"
+            class="continue-shopping">
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+            Continue Shopping
+
+        </a>
+
+    </div>
+
+</header>
+
+
+<main class="wishlist-page">
+
+    <div class="container">
+
+        <div class="page-heading">
+
+            <span class="section-label">
+                Your Favorites
+            </span>
+
+            <h1>
+                My Wishlist
+            </h1>
+
+            <p>
+                Products you want to buy later.
+            </p>
+
+        </div>
+
+
+        <div
+            class="product-grid"
+            id="wishlistProducts">
+        </div>
+
+
+        <div
+            class="empty-state"
+            id="emptyWishlist"
+            style="display:none;">
+
+            <i class="fa-regular fa-heart"></i>
+
+            <h2>
+                Your wishlist is empty
+            </h2>
+
+            <p>
+                Save your favorite products here.
+            </p>
+
+            <a
+                href="products.html"
+                class="primary-btn">
+
+                Explore Products
+
+            </a>
+
+        </div>
+
+    </div>
+
+</main>
+
+
+<div
+    class="toast"
+    id="toast">
+
+    <i class="fa-solid fa-circle-check"></i>
+
+    <span id="toastMessage"></span>
+
+</div>
+
+
+<script src="../JS/script.js"></script>
+
+<script>
+    function loadWishlist() {
+
+    const wishlist = getWishlist();
+
+    const container = document.getElementById("wishlistProducts");
+    const empty = document.getElementById("emptyWishlist");
+
+    const wishlistProducts = products.filter(product =>
+        wishlist.includes(product.id)
+    );
+
+    if (!wishlistProducts.length) {
+
+        container.innerHTML = "";
+        empty.style.display = "block";
+
+        return;
+    }
+
+    empty.style.display = "none";
+
+    container.innerHTML =
+        wishlistProducts
+            .map(createProductCard)
+            .join("");
+}
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    loadWishlist();
+});
+
+
+
+
+</script>
+
+</script>
+
+</body>
+
+</html>

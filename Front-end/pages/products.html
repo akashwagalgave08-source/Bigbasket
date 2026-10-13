@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Products - FreshBasket</title>
+
+    <link
+        rel="stylesheet"
+        href="../CSS/style.css">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body data-page="products">
+
+
+<header class="main-header">
+
+    <div class="container header-content">
+
+        <div class="logo">
+
+            <a href="../index.html">
+
+                <span>fresh</span>
+                <strong>basket</strong>
+
+            </a>
+
+        </div>
+
+
+        <div class="search-box">
+
+            <input
+                id="searchInput"
+                type="text"
+                placeholder="Search products...">
+
+            <button id="searchButton">
+
+                <i class="fa-solid fa-search"></i>
+
+            </button>
+
+            <div
+                class="search-results"
+                id="searchResults">
+            </div>
+
+        </div>
+
+
+        <div class="header-actions">
+
+            <a
+                href="wishlist.html"
+                class="icon-btn">
+
+                <i class="fa-regular fa-heart"></i>
+
+                <span
+                    class="badge"
+                    id="wishlistCount">
+                    0
+                </span>
+
+            </a>
+
+
+            <a
+                href="cart.html"
+                class="cart-btn">
+
+                <i class="fa-solid fa-cart-shopping"></i>
+
+                Cart
+
+                <b id="cartCount">
+                    0
+                </b>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<nav class="main-nav">
+
+    <div class="container nav-content">
+
+        <a href="../index.html">
+            Home
+        </a>
+
+        <a href="products.html">
+            All Products
+        </a>
+
+        <a href="wishlist.html">
+            Wishlist
+        </a>
+
+        <a href="cart.html">
+            Cart
+        </a>
+
+    </div>
+
+</nav>
+
+
+<main class="products-page">
+
+    <div class="container">
+
+        <div class="breadcrumb">
+
+            <a href="../index.html">
+                Home
+            </a>
+
+            <span>/</span>
+
+            <span>Products</span>
+
+        </div>
+
+
+        <div class="products-layout">
+
+
+            <!-- FILTER SIDEBAR -->
+
+            <aside class="filter-sidebar">
+
+                <div class="filter-header">
+
+                    <h3>
+                        Filters
+                    </h3>
+
+                    <button id="clearFilters">
+                        Clear
+                    </button>
+
+                </div>
+
+
+                <div class="filter-group">
+
+                    <h4>Category</h4>
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="category"
+                            value="all"
+                            checked>
+
+                        All Products
+
+                    </label>
+
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="category"
+                            value="Fruits">
+
+                        Fruits
+
+                    </label>
+
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="category"
+                            value="Vegetables">
+
+                        Vegetables
+
+                    </label>
+
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="category"
+                            value="Dairy">
+
+                        Dairy
+
+                    </label>
+
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="category"
+                            value="Staples">
+
+                        Staples
+
+                    </label>
+
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="category"
+                            value="Snacks">
+
+                        Snacks
+
+                    </label>
+
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="category"
+                            value="Beverages">
+
+                        Beverages
+
+                    </label>
+
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="category"
+                            value="Household">
+
+                        Household
+
+                    </label>
+
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="category"
+                            value="Personal Care">
+
+                        Personal Care
+
+                    </label>
+
+                </div>
+
+
+                <div class="filter-group">
+
+                    <h4>Price</h4>
+
+                    <label>
+                        <input
+                            type="checkbox"
+                            class="price-filter"
+                            value="0-100">
+
+                        Under ₹100
+
+                    </label>
+
+                    <label>
+                        <input
+                            type="checkbox"
+                            class="price-filter"
+                            value="100-250">
+
+                        ₹100 - ₹250
+
+                    </label>
+
+                    <label>
+                        <input
+                            type="checkbox"
+                            class="price-filter"
+                            value="250-500">
+
+                        ₹250 - ₹500
+
+                    </label>
+
+                    <label>
+                        <input
+                            type="checkbox"
+                            class="price-filter"
+                            value="500">
+
+                        Above ₹500
+
+                    </label>
+
+                </div>
+
+            </aside>
+
+
+            <!-- PRODUCTS -->
+
+            <section class="products-content">
+
+                <div class="products-toolbar">
+
+                    <div>
+
+                        <h1>
+                            All Products
+                        </h1>
+
+                        <p id="productCount">
+                            20 products
+                        </p>
+
+                    </div>
+
+
+                    <select id="sortProducts">
+
+                        <option value="default">
+                            Sort By
+                        </option>
+
+                        <option value="price-low">
+                            Price: Low to High
+                        </option>
+
+                        <option value="price-high">
+                            Price: High to Low
+                        </option>
+
+                        <option value="rating">
+                            Highest Rated
+                        </option>
+
+                        <option value="discount">
+                            Highest Discount
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div
+                    class="product-grid"
+                    id="productsContainer">
+                </div>
+
+
+                <div
+                    class="empty-state"
+                    id="emptyProducts"
+                    style="display:none;">
+
+                    <i class="fa-solid fa-box-open"></i>
+
+                    <h2>
+                        No products found
+                    </h2>
+
+                    <p>
+                        Try changing your filters.
+                    </p>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </div>
+
+</main>
+
+
+<div
+    class="toast"
+    id="toast">
+
+    <i class="fa-solid fa-circle-check"></i>
+
+    <span id="toastMessage"></span>
+
+</div>
+
+
+<script src="../JS/script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="FreshCart Secure Payment"
+    >
+
+    <title>FreshCart - Payment</title>
+
+    <!-- Main CSS -->
+    <link
+        rel="stylesheet"
+        href="../CSS/style.css"
+    >
+
+    <!-- Payment CSS -->
+    <link
+        rel="stylesheet"
+        href="../CSS/payment.css"
+    >
+
+</head>
+
+
+<body data-page="payment">
+
+
+<!-- =====================================================
+     TOP BAR
+===================================================== -->
+
+<div class="top-bar">
+
+    <p>
+        🔒 Secure Checkout | FreshCart
+    </p>
+
+</div>
+
+
+<!-- =====================================================
+     PAYMENT HEADER
+===================================================== -->
+
+<header class="payment-page-header">
+
+    <div class="payment-header-container">
+
+        <a
+            href="../index.html"
+            class="payment-logo"
+        >
+
+            <img
+                src="../images/logo.png"
+                alt="FreshCart"
+            >
+
+        </a>
+
+
+        <div class="secure-text">
+
+            🔒
+            <span>
+                Secure Payment
+            </span>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- =====================================================
+     CHECKOUT STEPS
+===================================================== -->
+
+<div class="checkout-progress">
+
+    <div class="progress-step completed">
+
+        <span>
+            ✓
+        </span>
+
+        <p>
+            Cart
+        </p>
+
+    </div>
+
+
+    <div class="progress-line"></div>
+
+
+    <div class="progress-step completed">
+
+        <span>
+            ✓
+        </span>
+
+        <p>
+            Address
+        </p>
+
+    </div>
+
+
+    <div class="progress-line"></div>
+
+
+    <div class="progress-step active">
+
+        <span>
+            3
+        </span>
+
+        <p>
+            Payment
+        </p>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     PAYMENT PAGE
+===================================================== -->
+
+<main class="payment-page">
+
+    <div class="payment-container">
+
+
+        <!-- =============================================
+             LEFT SIDE
+        ============================================== -->
+
+        <section class="payment-left">
+
+
+            <!-- DELIVERY ADDRESS -->
+
+            <div class="payment-card">
+
+                <div class="payment-card-header">
+
+                    <div>
+
+                        <span class="card-icon">
+                            📍
+                        </span>
+
+                        <h2>
+                            Delivery Address
+                        </h2>
+
+                    </div>
+
+                    <button
+                        type="button"
+                        id="changeAddress"
+                    >
+                        Change
+                    </button>
+
+                </div>
+
+
+                <div class="address-box">
+
+                    <strong>
+                        Home
+                    </strong>
+
+                    <p id="addressName">
+                        Akash
+                    </p>
+
+                    <p id="addressLocation">
+                        Pune, Maharashtra, India
+                    </p>
+
+                    <p id="addressPhone">
+                        📞 +91 8767559157
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- =========================================
+                 PAYMENT METHODS
+            ========================================== -->
+
+            <div class="payment-card">
+
+                <h2>
+                    💳 Select Payment Method
+                </h2>
+
+
+                <div class="payment-methods">
+
+
+                    <!-- UPI -->
+
+                    <button
+                        type="button"
+                        class="payment-method active"
+                        data-method="upi"
+                    >
+
+                        <span class="method-icon">
+                            📱
+                        </span>
+
+                        <span class="method-info">
+
+                            <strong>
+                                UPI
+                            </strong>
+
+                            <small>
+                                Google Pay, PhonePe, Paytm
+                            </small>
+
+                        </span>
+
+                        <span class="method-radio">
+                            ●
+                        </span>
+
+                    </button>
+
+
+                    <!-- CARD -->
+
+                    <button
+                        type="button"
+                        class="payment-method"
+                        data-method="card"
+                    >
+
+                        <span class="method-icon">
+                            💳
+                        </span>
+
+                        <span class="method-info">
+
+                            <strong>
+                                Credit / Debit Card
+                            </strong>
+
+                            <small>
+                                Visa, Mastercard, RuPay
+                            </small>
+
+                        </span>
+
+                        <span class="method-radio">
+                            ○
+                        </span>
+
+                    </button>
+
+
+                    <!-- NET BANKING -->
+
+                    <button
+                        type="button"
+                        class="payment-method"
+                        data-method="netbanking"
+                    >
+
+                        <span class="method-icon">
+                            🏦
+                        </span>
+
+                        <span class="method-info">
+
+                            <strong>
+                                Net Banking
+                            </strong>
+
+                            <small>
+                                All major banks supported
+                            </small>
+
+                        </span>
+
+                        <span class="method-radio">
+                            ○
+                        </span>
+
+                    </button>
+
+
+                    <!-- COD -->
+
+                    <button
+                        type="button"
+                        class="payment-method"
+                        data-method="cod"
+                    >
+
+                        <span class="method-icon">
+                            💵
+                        </span>
+
+                        <span class="method-info">
+
+                            <strong>
+                                Cash on Delivery
+                            </strong>
+
+                            <small>
+                                Pay when your order arrives
+                            </small>
+
+                        </span>
+
+                        <span class="method-radio">
+                            ○
+                        </span>
+
+                    </button>
+
+                </div>
+
+
+                <!-- =====================================
+                     UPI FORM
+                ====================================== -->
+
+                <div
+                    class="payment-form"
+                    id="upiForm"
+                >
+
+                    <label>
+                        UPI ID
+                    </label>
+
+                    <div class="input-button">
+
+                        <input
+                            type="text"
+                            id="upiId"
+                            placeholder="example@upi"
+                        >
+
+                        <button
+                            type="button"
+                            id="verifyUpi"
+                        >
+                            Verify
+                        </button>
+
+                    </div>
+
+                    <p
+                        id="upiMessage"
+                        class="payment-message"
+                    ></p>
+
+                </div>
+
+
+                <!-- =====================================
+                     CARD FORM
+                ====================================== -->
+
+                <div
+                    class="payment-form hidden"
+                    id="cardForm"
+                >
+
+                    <label>
+                        Card Number
+                    </label>
+
+                    <input
+                        type="text"
+                        id="cardNumber"
+                        placeholder="1234 5678 9012 3456"
+                        maxlength="19"
+                    >
+
+
+                    <div class="card-row">
+
+                        <div>
+
+                            <label>
+                                Expiry Date
+                            </label>
+
+                            <input
+                                type="text"
+                                id="cardExpiry"
+                                placeholder="MM/YY"
+                                maxlength="5"
+                            >
+
+                        </div>
+
+
+                        <div>
+
+                            <label>
+                                CVV
+                            </label>
+
+                            <input
+                                type="password"
+                                id="cardCvv"
+                                placeholder="•••"
+                                maxlength="3"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <label>
+                        Name on Card
+                    </label>
+
+                    <input
+                        type="text"
+                        id="cardName"
+                        placeholder="Enter card holder name"
+                    >
+
+                </div>
+
+
+                <!-- =====================================
+                     NET BANKING
+                ====================================== -->
+
+                <div
+                    class="payment-form hidden"
+                    id="netbankingForm"
+                >
+
+                    <label>
+                        Select Bank
+                    </label>
+
+                    <select id="bankSelect">
+
+                        <option value="">
+                            Select your bank
+                        </option>
+
+                        <option value="sbi">
+                            State Bank of India
+                        </option>
+
+                        <option value="hdfc">
+                            HDFC Bank
+                        </option>
+
+                        <option value="icici">
+                            ICICI Bank
+                        </option>
+
+                        <option value="axis">
+                            Axis Bank
+                        </option>
+
+                        <option value="kotak">
+                            Kotak Mahindra Bank
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- =====================================
+                     COD
+                ====================================== -->
+
+                <div
+                    class="payment-form cod-box hidden"
+                    id="codForm"
+                >
+
+                    <span>
+                        💵
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            Cash on Delivery
+                        </strong>
+
+                        <p>
+                            Pay in cash when your order
+                            is delivered.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =============================================
+             RIGHT SIDE
+        ============================================== -->
+
+        <aside class="payment-right">
+
+            <div class="order-summary-card">
+
+                <h2>
+                    Order Summary
+                </h2>
+
+
+                <!-- ITEMS -->
+
+                <div
+                    id="paymentItems"
+                    class="payment-items"
+                ></div>
+
+
+                <div class="summary-divider"></div>
+
+
+                <!-- ITEM COUNT -->
+
+                <div class="summary-row">
+
+                    <span>
+                        Items
+                    </span>
+
+                    <strong id="paymentItemCount">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <!-- SUBTOTAL -->
+
+                <div class="summary-row">
+
+                    <span>
+                        Subtotal
+                    </span>
+
+                    <strong id="paymentSubtotal">
+                        ₹0
+                    </strong>
+
+                </div>
+
+
+                <!-- DELIVERY -->
+
+                <div class="summary-row">
+
+                    <span>
+                        Delivery
+                    </span>
+
+                    <strong id="paymentDelivery">
+                        FREE
+                    </strong>
+
+                </div>
+
+
+                <!-- DISCOUNT -->
+
+                <div class="summary-row discount">
+
+                    <span>
+                        Discount
+                    </span>
+
+                    <strong id="paymentDiscount">
+                        -₹0
+                    </strong>
+
+                </div>
+
+
+                <div class="summary-divider"></div>
+
+
+                <!-- TOTAL -->
+
+                <div class="summary-total">
+
+                    <span>
+                        Total Amount
+                    </span>
+
+                    <strong id="paymentTotal">
+                        ₹0
+                    </strong>
+
+                </div>
+
+
+                <!-- SECURITY -->
+
+                <div class="secure-payment">
+
+                    <span>
+                        🔒
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            Safe & Secure Payment
+                        </strong>
+
+                        <p>
+                            Your payment information is protected.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- TERMS -->
+
+                <label class="terms-check">
+
+                    <input
+                        type="checkbox"
+                        id="paymentTerms"
+                    >
+
+                    <span>
+                        I agree to the Terms & Conditions
+                    </span>
+
+                </label>
+
+
+                <!-- PLACE ORDER -->
+
+                <button
+                    type="button"
+                    class="place-order-btn"
+                    id="placeOrderBtn"
+                >
+
+                    🔒
+                    Place Order
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="back-cart-btn"
+                    id="backToCart"
+                >
+
+                    ← Back to Cart
+
+                </button>
+
+            </div>
+
+        </aside>
+
+    </div>
+
+</main>
+
+
+<!-- =====================================================
+     SUCCESS POPUP
+===================================================== -->
+
+<div
+    class="success-overlay hidden"
+    id="successOverlay"
+>
+
+    <div class="success-popup">
+
+        <div class="success-icon">
+            ✓
+        </div>
+
+        <h2>
+            Order Placed Successfully!
+        </h2>
+
+        <p>
+            Thank you for shopping with FreshCart.
+        </p>
+
+        <p>
+            Order ID:
+            <strong id="successOrderId">
+                FB000000
+            </strong>
+        </p>
+
+        <button id="continueShopping">
+            Continue Shopping
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     TOAST
+===================================================== -->
+
+<div
+    class="toast"
+    id="toast"
+>
+
+    <span>
+        ✓
+    </span>
+
+    <p id="toastMessage">
+        Message
+    </p>
+
+</div>
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script src="../JS/payment.js"></script>
+
+</body>
+
+</html>

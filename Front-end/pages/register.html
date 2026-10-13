@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Create Account - Fresh Cart</title>
+
+        <link
+    rel="stylesheet"
+    href="../CSS/style.css"
+>
+</head>
+
+
+<body class="auth-page" data-page="register">
+
+
+    <!-- =================================================
+         REGISTER CARD
+    ================================================== -->
+
+    <main class="register-container">
+
+        <div class="register-card">
+
+
+            <!-- LOGO -->
+
+            <div class="register-logo">
+
+                <a href="../index.html" class="register-brand-logo" aria-label="Fresh Cart home">
+                    <img src="../images/logo.png" alt="Fresh Cart">
+                </a>
+
+               
+
+            </div>
+
+
+            <!-- TITLE -->
+
+            <h2>
+                Create Account
+            </h2>
+
+            <p class="register-subtitle">
+                Join Fresh Cart and start shopping
+            </p>
+
+
+            <!-- =================================================
+                 REGISTER FORM
+            ================================================== -->
+
+            <form
+                id="registerForm"
+                novalidate
+            >
+
+
+                <!-- FULL NAME -->
+
+                <div class="form-group">
+
+                    <label for="registerName">
+                        Full Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="registerName"
+                        placeholder="Enter your full name"
+                        autocomplete="name"
+                    >
+
+                    <small
+                        id="nameError"
+                        class="form-error"
+                    ></small>
+
+                </div>
+
+
+                <!-- EMAIL -->
+
+                <div class="form-group">
+
+                    <label for="registerEmail">
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="registerEmail"
+                        placeholder="Enter your email address"
+                        autocomplete="email"
+                    >
+
+                    <small
+                        id="emailError"
+                        class="form-error"
+                    ></small>
+
+                </div>
+
+
+                <!-- MOBILE -->
+
+                <div class="form-group">
+
+                    <label for="registerPhone">
+                        Mobile Number
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="registerPhone"
+                        placeholder="Enter 10-digit mobile number"
+                        maxlength="10"
+                        autocomplete="tel"
+                    >
+
+                    <small
+                        id="phoneError"
+                        class="form-error"
+                    ></small>
+
+                </div>
+
+
+                <!-- PASSWORD -->
+
+                <div class="form-group">
+
+                    <label for="registerPassword">
+                        Password
+                    </label>
+
+                    <div class="password-wrapper">
+
+                        <input
+                            type="password"
+                            id="registerPassword"
+                            placeholder="Create a password"
+                            autocomplete="new-password"
+                        >
+
+                        <button
+                            type="button"
+                            class="password-toggle"
+                            id="passwordToggle"
+                        >
+                            👁
+                        </button>
+
+                    </div>
+
+                    <small
+                        id="passwordError"
+                        class="form-error"
+                    ></small>
+
+                </div>
+
+
+                <!-- CONFIRM PASSWORD -->
+
+                <div class="form-group">
+
+                    <label for="confirmPassword">
+                        Confirm Password
+                    </label>
+
+                    <div class="password-wrapper">
+
+                        <input
+                            type="password"
+                            id="confirmPassword"
+                            placeholder="Confirm your password"
+                            autocomplete="new-password"
+                        >
+
+                        <button
+                            type="button"
+                            class="password-toggle"
+                            id="confirmPasswordToggle"
+                        >
+                            👁
+                        </button>
+
+                    </div>
+
+                    <small
+                        id="confirmPasswordError"
+                        class="form-error"
+                    ></small>
+
+                </div>
+
+
+                <!-- TERMS -->
+
+                <div class="terms-row">
+
+                    <input
+                        type="checkbox"
+                        id="terms"
+                    >
+
+                    <label for="terms">
+
+                        I agree to the
+                        
+                        <a href="#">
+                            Terms & Conditions
+                        </a>
+
+                    </label>
+
+                </div>
+
+                <small
+                    id="termsError"
+                    class="form-error"
+                ></small>
+
+
+                <!-- REGISTER BUTTON -->
+
+                <button
+                    type="submit"
+                    class="register-submit-btn"
+                >
+                    Create Account
+                </button>
+
+
+                <!-- SUCCESS / ERROR MESSAGE -->
+
+                <div
+                    id="registerMessage"
+                    class="register-message"
+                ></div>
+
+
+            </form>
+
+
+            <!-- LOGIN LINK -->
+
+            <div class="already-account">
+
+                <p>
+                    Already have an account?
+                </p>
+
+                <a href="login.html">
+                    Login
+                </a>
+
+            </div>
+
+
+            <!-- CONTINUE SHOPPING -->
+
+            <a
+                href="../index.html"
+                class="continue-shopping"
+            >
+                ← Continue Shopping
+            </a>
+
+
+        </div>
+
+    </main>
+
+
+    <script src="../JS/script.js"></script>
+
+</body>
+
+</html>

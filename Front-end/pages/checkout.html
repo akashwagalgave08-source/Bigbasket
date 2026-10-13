@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Checkout - FreshBasket</title>
+
+    <link
+        rel="stylesheet"
+        href="../CSS/style.css">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body data-page="checkout">
+
+
+<header class="main-header">
+
+    <div class="container header-content">
+
+        <div class="logo">
+
+            <a href="../index.html">
+
+                <span>fresh</span>
+                <strong>basket</strong>
+
+            </a>
+
+        </div>
+
+        <div class="secure-header">
+
+            <i class="fa-solid fa-lock"></i>
+
+            Secure Checkout
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<main class="checkout-page">
+
+    <div class="container">
+
+        <div class="checkout-layout">
+
+
+            <!-- ADDRESS + PAYMENT -->
+
+            <section class="checkout-main">
+
+                <div class="checkout-card">
+
+                    <h2>
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                        Delivery Address
+
+                    </h2>
+
+
+                    <form id="checkoutForm">
+
+                        <div class="form-grid">
+
+                            <input
+                                type="text"
+                                name="name"
+                                placeholder="Full Name"
+                                required>
+
+                            <input
+                                type="tel"
+                                name="phone"
+                                placeholder="Phone Number"
+                                pattern="[0-9]{10}"
+                                required>
+
+                        </div>
+
+
+                        <textarea
+                            name="line1"
+                            placeholder="Complete Address"
+                            required></textarea>
+
+
+                        <div class="form-grid">
+
+                            <input
+                                type="text"
+                                name="city"
+                                placeholder="City"
+                                required>
+
+                            <input
+                                type="text"
+                                name="pincode"
+                                inputmode="numeric"
+                                pattern="[0-9]{6}"
+                                placeholder="Pincode"
+                                required>
+
+                        </div>
+
+
+                        <!-- =================================================
+                             PAYMENT METHOD
+                        ================================================== -->
+
+                        <h2>
+
+                            <i class="fa-solid fa-credit-card"></i>
+
+                            Payment Method
+
+                        </h2>
+
+
+                        <div class="payment-methods">
+
+
+                            <!-- UPI -->
+
+                            <label class="payment-method active">
+
+                                <input
+                                    type="radio"
+                                    name="payment"
+                                    value="upi"
+                                    checked>
+
+                                <div class="payment-method-icon">
+                                    UPI
+                                </div>
+
+                                <div class="payment-method-content">
+
+                                    <strong>
+                                        UPI
+                                    </strong>
+
+                                    <span>
+                                        Google Pay, PhonePe, Paytm, BHIM
+                                    </span>
+
+                                </div>
+
+                                <span class="radio-circle"></span>
+
+                            </label>
+
+
+                            <!-- CARD -->
+
+                            <label class="payment-method">
+
+                                <input
+                                    type="radio"
+                                    name="payment"
+                                    value="card">
+
+                                <div class="payment-method-icon">
+                                    <i class="fa-solid fa-credit-card"></i>
+                                </div>
+
+                                <div class="payment-method-content">
+
+                                    <strong>
+                                        Credit / Debit Card
+                                    </strong>
+
+                                    <span>
+                                        Visa, Mastercard, RuPay
+                                    </span>
+
+                                </div>
+
+                                <span class="radio-circle"></span>
+
+                            </label>
+
+
+                            <!-- NET BANKING -->
+
+                            <label class="payment-method">
+
+                                <input
+                                    type="radio"
+                                    name="payment"
+                                    value="netbanking">
+
+                                <div class="payment-method-icon">
+                                    <i class="fa-solid fa-building-columns"></i>
+                                </div>
+
+                                <div class="payment-method-content">
+
+                                    <strong>
+                                        Net Banking
+                                    </strong>
+
+                                    <span>
+                                        Pay using your bank account
+                                    </span>
+
+                                </div>
+
+                                <span class="radio-circle"></span>
+
+                            </label>
+
+
+                            <!-- COD -->
+
+                            <label class="payment-method">
+
+                                <input
+                                    type="radio"
+                                    name="payment"
+                                    value="cod">
+
+                                <div class="payment-method-icon">
+                                    <i class="fa-solid fa-money-bill"></i>
+                                </div>
+
+                                <div class="payment-method-content">
+
+                                    <strong>
+                                        Cash on Delivery
+                                    </strong>
+
+                                    <span>
+                                        Pay when your order arrives
+                                    </span>
+
+                                </div>
+
+                                <span class="radio-circle"></span>
+
+                            </label>
+
+                        </div>
+
+
+                        <!-- =================================================
+                             UPI DETAILS
+                        ================================================== -->
+
+                        <div
+                            class="payment-details"
+                            id="upiDetails">
+
+                            <h3>
+                                Enter UPI ID
+                            </h3>
+
+                            <div class="upi-input-row">
+
+                                <input
+                                    type="text"
+                                    id="upiId"
+                                    placeholder="example@upi">
+
+                                <button
+                                    type="button"
+                                    id="verifyUpi">
+                                    Verify
+                                </button>
+
+                            </div>
+
+                            <small id="upiMessage"></small>
+
+                        </div>
+
+
+                        <!-- =================================================
+                             CARD DETAILS
+                        ================================================== -->
+
+                        <div
+                            class="payment-details hidden"
+                            id="cardDetails">
+
+                            <h3>
+                                Card Details
+                            </h3>
+
+                            <div class="card-input-group">
+
+                                <label>
+                                    Card Number
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="cardNumber"
+                                    maxlength="19"
+                                    placeholder="1234 5678 9012 3456">
+
+                            </div>
+
+
+                            <div class="card-row">
+
+                                <div class="card-input-group">
+
+                                    <label>
+                                        Expiry Date
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="expiryDate"
+                                        maxlength="5"
+                                        placeholder="MM/YY">
+
+                                </div>
+
+
+                                <div class="card-input-group">
+
+                                    <label>
+                                        CVV
+                                    </label>
+
+                                    <input
+                                        type="password"
+                                        id="cvv"
+                                        maxlength="3"
+                                        placeholder="•••">
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="card-input-group">
+
+                                <label>
+                                    Name on Card
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="cardName"
+                                    placeholder="Enter card holder name">
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- =================================================
+                             NET BANKING
+                        ================================================== -->
+
+                        <div
+                            class="payment-details hidden"
+                            id="netbankingDetails">
+
+                            <h3>
+                                Select Your Bank
+                            </h3>
+
+                            <select id="bankSelect">
+
+                                <option value="">
+                                    Select Bank
+                                </option>
+
+                                <option>
+                                    State Bank of India
+                                </option>
+
+                                <option>
+                                    HDFC Bank
+                                </option>
+
+                                <option>
+                                    ICICI Bank
+                                </option>
+
+                                <option>
+                                    Axis Bank
+                                </option>
+
+                                <option>
+                                    Kotak Mahindra Bank
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- =================================================
+                             COD
+                        ================================================== -->
+
+                        <div
+                            class="payment-details hidden"
+                            id="codDetails">
+
+                            <div class="cod-info">
+
+                                <span>
+                                    💵
+                                </span>
+
+                                <div>
+
+                                    <strong>
+                                        Cash on Delivery
+                                    </strong>
+
+                                    <p>
+                                        Pay in cash when your order is delivered.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <button
+                            type="submit"
+                            class="primary-btn full-width">
+
+                            Place Order
+
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </section>
+
+
+            <!-- ORDER SUMMARY -->
+
+            <aside class="checkout-summary">
+
+                <h2>
+                    Your Order
+                </h2>
+
+
+                <div id="checkoutItems">
+                </div>
+
+
+                <hr>
+
+
+                <div class="summary-row">
+
+                    <span>
+                        Subtotal
+                    </span>
+
+                    <strong id="checkoutSubtotal">
+                        ₹0
+                    </strong>
+
+                </div>
+
+
+                <div class="summary-row">
+
+                    <span>
+                        Delivery
+                    </span>
+
+                    <strong id="checkoutDelivery">
+                        FREE
+                    </strong>
+
+                </div>
+
+
+                <div class="summary-total">
+
+                    <span>
+                        Total
+                    </span>
+
+                    <strong id="checkoutTotal">
+                        ₹0
+                    </strong>
+
+                </div>
+
+            </aside>
+
+        </div>
+
+    </div>
+
+</main>
+
+
+<div
+    class="toast"
+    id="toast">
+
+    <i class="fa-solid fa-circle-check"></i>
+
+    <span id="toastMessage"></span>
+
+</div>
+
+
+<script src="../JS/script.js?v=20260917"></script>
+
+</body>
+
+</html>
